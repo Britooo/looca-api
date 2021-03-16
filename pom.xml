@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.britooo</groupId>
     <artifactId>looca-api</artifactId>
-    <version>0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -76,18 +76,7 @@
                   </execution>
                 </executions>
               </plugin>
-              <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <configuration>
-                  <autoVersionSubmodules>true</autoVersionSubmodules>
-                  <useReleaseProfile>false</useReleaseProfile>
-                  <releaseProfiles>release</releaseProfiles>
-                  <goals>deploy</goals>
-                </configuration>
-              </plugin>
-        </plugins>
+            </plugins>
     </build>
 
     <distributionManagement>
@@ -121,8 +110,7 @@
         <connection>scm:git:git://github.com/Britooo/looca-api.git</connection>
         <developerConnection>scm:git:ssh://github.com:Britooo/looca-api.git</developerConnection>
         <url>https://github.com/Britooo/looca-api</url>
-        <tag>looca-api-0</tag>
-  </scm>
+      </scm>
 
     <dependencies>
         <!--  https://mvnrepository.com/artifact/com.github.oshi/oshi-core  -->
