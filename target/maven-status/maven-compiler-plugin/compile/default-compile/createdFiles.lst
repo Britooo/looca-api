@@ -1,0 +1,14 @@
+com/github/britooo/looca/api/group/servicos/ServicosGroup$STATUS.class
+com/github/britooo/looca/api/group/processos/ProcessosGroup.class
+com/github/britooo/looca/api/group/sistema/Sistema.class
+com/github/britooo/looca/api/group/memoria/Memoria.class
+com/github/britooo/looca/api/group/processador/Processador.class
+com/github/britooo/looca/api/group/discos/Disco.class
+com/github/britooo/looca/api/group/servicos/Servico.class
+com/github/britooo/looca/api/group/processos/Processo.class
+com/github/britooo/looca/api/group/discos/Volume.class
+com/github/britooo/looca/api/util/Conversor.class
+com/github/britooo/looca/api/group/temperatura/Temperatura.class
+com/github/britooo/looca/api/group/servicos/ServicosGroup.class
+com/github/britooo/looca/api/core/Looca.class
+com/github/britooo/looca/api/group/discos/DiscosGroup.class

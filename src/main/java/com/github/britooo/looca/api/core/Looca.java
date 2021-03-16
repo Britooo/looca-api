@@ -1,17 +1,17 @@
 package com.github.britooo.looca.api.core;
 
-import com.github.britooo.looca.api.group.discos.DiscosGroup;
+import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.memoria.Memoria;
+import com.github.britooo.looca.api.group.discos.DiscosGroup;
+import com.github.britooo.looca.api.group.servicos.ServicosGroup;
 import com.github.britooo.looca.api.group.processador.Processador;
 import com.github.britooo.looca.api.group.processos.ProcessosGroup;
-import com.github.britooo.looca.api.group.servicos.ServicosGroup;
-import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
 
 /**
  *
- * @author Diego Brito <diego.lima@bandtec.com.br | @Britooo on Github>
- * @author Giuliana Miniguiti <giuliana.franca@bandtec.com.br | @Britooo on Github>
+ * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
+ * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
  */
 public class Looca {
 

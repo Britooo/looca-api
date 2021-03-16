@@ -5,8 +5,8 @@ import oshi.hardware.HardwareAbstractionLayer;
 
 /**
  *
- * @author Diego Brito <diego.lima@bandtec.com.br | @Britooo on Github>
- * @author Giuliana Miniguiti <giuliana.franca@bandtec.com.br | @Britooo on Github>
+ * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
+ * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
  */
 public class Temperatura {
 

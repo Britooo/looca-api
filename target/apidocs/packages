@@ -1,0 +1,9 @@
+com.github.britooo.looca.api.util
+com.github.britooo.looca.api.core
+com.github.britooo.looca.api.group.processador
+com.github.britooo.looca.api.group.sistema
+com.github.britooo.looca.api.group.discos
+com.github.britooo.looca.api.group.servicos
+com.github.britooo.looca.api.group.processos
+com.github.britooo.looca.api.group.temperatura
+com.github.britooo.looca.api.group.memoria

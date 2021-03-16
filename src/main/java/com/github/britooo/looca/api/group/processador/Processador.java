@@ -1,17 +1,17 @@
 package com.github.britooo.looca.api.group.processador;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import oshi.SystemInfo;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import oshi.SystemInfo;
+import java.util.concurrent.Executors;
 import oshi.hardware.CentralProcessor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ExecutionException;
 
 /**
  *
- * @author Diego Brito <diego.lima@bandtec.com.br | @Britooo on Github>
- * @author Giuliana Miniguiti <giuliana.franca@bandtec.com.br | @Britooo on Github>
+ * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
+ * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
  */
 public class Processador {
 

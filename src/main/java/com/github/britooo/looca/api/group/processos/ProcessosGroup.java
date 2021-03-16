@@ -1,16 +1,16 @@
 package com.github.britooo.looca.api.group.processos;
 
-import com.github.britooo.looca.api.group.memoria.Memoria;
 import java.util.List;
-import java.util.stream.Collectors;
 import oshi.SystemInfo;
 import oshi.software.os.OSProcess;
+import java.util.stream.Collectors;
 import oshi.software.os.OperatingSystem;
+import com.github.britooo.looca.api.group.memoria.Memoria;
 
 /**
  *
- * @author Diego Brito <diego.lima@bandtec.com.br | @Britooo on Github>
- * @author Giuliana Miniguiti <giuliana.franca@bandtec.com.br | @Britooo on Github>
+ * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
+ * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
  */
 public class ProcessosGroup {
 

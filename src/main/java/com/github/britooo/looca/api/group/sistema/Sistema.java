@@ -1,14 +1,14 @@
 package com.github.britooo.looca.api.group.sistema;
 
-import com.github.britooo.looca.api.util.Conversor;
-import java.time.Instant;
 import oshi.SystemInfo;
+import java.time.Instant;
 import oshi.software.os.OperatingSystem;
+import com.github.britooo.looca.api.util.Conversor;
 
 /**
  *
- * @author Diego Brito <diego.lima@bandtec.com.br | @Britooo on Github>
- * @author Giuliana Miniguiti <giuliana.franca@bandtec.com.br | @Britooo on Github>
+ * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
+ * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
  */
 public class Sistema {
 
