@@ -1,6 +1,6 @@
 
 [![Looca API](./readme/readmes.gif)](https://matrixenergia.com/)
-### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos, esse projeto visa ajudar os alunos da Faculdade @Bandtec em projetos de Pesquisa e Inovação
+### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade @Bandtec em projetos na disciplina de Pesquisa e Inovação.
 # 
 
 ![Badge](https://img.shields.io/badge/Code-Java-F76911?&logo=java) 
@@ -43,14 +43,13 @@ private final ProcessosGroup grupoDeProcessos;
 ```
 
 **Coletando dados do sistema operacional**
-#### Para coletar os dados da máquina, devemos utilizar os **getters** disponíveis no objeto Looca, por exemplo, para coletar os dados do sistema operacional, utilizamos o **```getSistema()```**, que devolve um objeto do tipo Sistema:
+Para coletar os dados da máquina, devemos utilizar os **getters** disponíveis no objeto Looca, por exemplo, para coletar os dados do sistema operacional, utilizamos o **```getSistema()```**, que devolve um objeto do tipo Sistema:
 
 
 ```java
 Sistema sistema = looca.getSistema();
 ```
-
-#### O objeto Sistema por sua vez, também possui **getters** que devolvem informações do sistema:
+O objeto Sistema por sua vez, também possui **getters** que devolvem informações do sistema:
 ```java
 sistema.getPermissao();
 sistema.getFabricante();
@@ -60,11 +59,11 @@ sistema.getInicializado();
 sistema.getSistemaOperacional();
 ```
 
-#### Para exibir no console as informações do sistema, basta imprimir o objeto:
+Para exibir no console as informações do sistema, basta imprimir o objeto:
 ```java
 System.out.println(sistema);
 ```
-#### Saída do console:
+Saída do console:
 ```
 Sistema operacional: Ubuntu
 Fabricante: GNU/Linux
@@ -77,7 +76,7 @@ Executando como usuário padrão
 
 
 **Trabalhando com os grupos**
-#### Para lidar com objetos que retornam mais de uma instância (lista) da informação desejada, utilizamos os grupos, que gerenciam essas informações, para obte-los, utilizamos o **```getGrupoNomeGrupo()```** (Discos, Processos ou Servicos), exemplo:
+Para lidar com objetos que retornam mais de uma instância (lista) da informação desejada, utilizamos os grupos, que gerenciam essas informações, para obte-los, utilizamos o **```getGrupoNomeGrupo()```** (Discos, Processos ou Servicos), exemplo:
 
 ```java
 //Criação do gerenciador
@@ -86,7 +85,7 @@ DiscosGroup grupoDeDiscos = looca.getGrupoDeDiscos();
 //Obtendo lista de discos a partir do getter
 List<Disco> discos = grupoDeDiscos.getDiscos();
 ```
-#### Exibindo as informações de cada disco:
+Exibindo as informações de cada disco:
 
 ```java
 for (Disco disco : discos) {
@@ -101,5 +100,4 @@ for (Disco disco : discos) {
 
 ## Licença
 #
-[MIT](LICENSE) © 2018 Haja Networks Oy
-
+[MIT](LICENSE) © 2021 Bandtec Digital School
