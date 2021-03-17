@@ -43,11 +43,13 @@ private final ProcessosGroup grupoDeProcessos;
 ```
 
 **Coletando dados do sistema operacional**
+
 Para coletar os dados da máquina, devemos utilizar os **getters** disponíveis no objeto Looca, por exemplo, para coletar os dados do sistema operacional, utilizamos o **```getSistema()```**, que devolve um objeto do tipo Sistema:
 
 
 ```java
 Sistema sistema = looca.getSistema();
+
 ```
 O objeto Sistema por sua vez, também possui **getters** que devolvem informações do sistema:
 ```java
@@ -76,6 +78,7 @@ Executando como usuário padrão
 
 
 **Trabalhando com os grupos**
+
 Para lidar com objetos que retornam mais de uma instância (lista) da informação desejada, utilizamos os grupos, que gerenciam essas informações, para obte-los, utilizamos o **```getGrupoNomeGrupo()```** (Discos, Processos ou Servicos), exemplo:
 
 ```java
