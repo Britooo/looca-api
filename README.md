@@ -1,11 +1,13 @@
 
 [![Looca API](./readme/readmes.gif)]()
+# Log of Computer Activity
+
 ### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade [@Bandtec](https://github.com/BandTec) em projetos na disciplina de Pesquisa e Inovação.
 # 
 
 ![Badge](https://img.shields.io/badge/Code-Java-F76911?&logo=java) 
 ![Badge](https://img.shields.io/badge/compiler-maven-4c9d1flogo=maven)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nyholmniklas/arithmetic/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nyholmniklas/arithmetic)
+[![Maven Central](https://search.maven.org/artifact/com.github.britooo/looca-api)](https://maven-badges.herokuapp.com/maven-central/com.github.nyholmniklas/arithmetic)
 
 #
 ## Instalação
