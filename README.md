@@ -7,7 +7,7 @@
 
 ![Badge](https://img.shields.io/badge/Code-Java-F76911?&logo=java) 
 ![Badge](https://img.shields.io/badge/compiler-maven-4c9d1flogo=maven)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nyholmniklas/arithmetic/badge.svg)(https://search.maven.org/artifact/com.github.britooo/looca-api)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nyholmniklas/arithmetic/badge.svg)](https://search.maven.org/artifact/com.github.britooo/looca-api)
 #
 ## Instalação
 **Adicione no pom.xml**:
