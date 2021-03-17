@@ -1,6 +1,6 @@
 
-[![Looca API](./readme/readmes.gif)](https://matrixenergia.com/)
-### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade @Bandtec em projetos na disciplina de Pesquisa e Inovação.
+[![Looca API](./readme/readmes.gif)]()
+### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade [@Bandtec](https://github.com/BandTec) em projetos na disciplina de Pesquisa e Inovação.
 # 
 
 ![Badge](https://img.shields.io/badge/Code-Java-F76911?&logo=java) 
