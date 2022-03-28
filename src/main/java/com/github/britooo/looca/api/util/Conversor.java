@@ -32,14 +32,20 @@ public class Conversor {
     }
     
     public static String formatarSegundosDecorridos(long secs) {
+        
         long eTime = secs;
+        
         final long days = TimeUnit.SECONDS.toDays(eTime);
         eTime -= TimeUnit.DAYS.toSeconds(days);
+        
         final long hr = TimeUnit.SECONDS.toHours(eTime);
         eTime -= TimeUnit.HOURS.toSeconds(hr);
+        
         final long min = TimeUnit.SECONDS.toMinutes(eTime);
         eTime -= TimeUnit.MINUTES.toSeconds(min);
+        
         final long sec = eTime;
+        
         return String.format("%d days, %02d:%02d:%02d", days, hr, min, sec);
     }
 
