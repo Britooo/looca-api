@@ -41,84 +41,91 @@
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.2.1</version>
                 <executions>
-                  <execution>
-                    <id>attach-sources</id>
-                    <goals>
-                      <goal>jar-no-fork</goal>
-                    </goals>
-                  </execution>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
                 </executions>
-              </plugin>
-              <plugin>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9.1</version>
                 <executions>
-                  <execution>
-                    <id>attach-javadocs</id>
-                    <goals>
-                      <goal>jar</goal>
-                    </goals>
-                  </execution>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
                 </executions>
-              </plugin>
-              <plugin>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.5</version>
                 <executions>
-                  <execution>
-                    <id>sign-artifacts</id>
-                    <phase>verify</phase>
-                    <goals>
-                      <goal>sign</goal>
-                    </goals>
-                  </execution>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
                 </executions>
-              </plugin>
-            </plugins>
+            </plugin>
+        </plugins>
     </build>
 
     <distributionManagement>
         <snapshotRepository>
-          <id>ossrh</id>
-          <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-          <id>ossrh</id>
-          <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-      </distributionManagement>
+    </distributionManagement>
 
     <licenses>
         <license>
-          <name>MIT License</name>
-          <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
-      </licenses>
+    </licenses>
       
-      <developers>
+    <developers>
         <developer>
-          <name>Diego Brito</name>
-          <email>diego.lima@bandtec.com.br</email>
-          <organization>com.github.britooo</organization>
-          <organizationUrl>https://github.com/Britooo/looca-api</organizationUrl>
+            <name>Diego Brito</name>
+            <email>diego.lima@bandtec.com.br</email>
+            <organization>com.github.britooo</organization>
+            <organizationUrl>https://github.com/Britooo/looca-api</organizationUrl>
         </developer>
-      </developers>
+    </developers>
 
-      <scm>
+    <scm>
         <connection>scm:git:git://github.com/Britooo/looca-api.git</connection>
         <developerConnection>scm:git:ssh://github.com:Britooo/looca-api.git</developerConnection>
         <url>https://github.com/Britooo/looca-api</url>
-      </scm>
+    </scm>
 
     <dependencies>
-        <!--  https://mvnrepository.com/artifact/com.github.oshi/oshi-core  -->
+        <!--          https://mvnrepository.com/artifact/com.github.oshi/oshi-core  
         <dependency>
             <groupId>com.github.oshi</groupId>
             <artifactId>oshi-core</artifactId>
             <version>5.3.6</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.github.oshi/oshi-core -->
+        <dependency>
+            <groupId>com.github.oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+            <version>6.1.5</version>
         </dependency>
+
         <!--  https://mvnrepository.com/artifact/org.slf4j/slf4j-api  -->
         <dependency>
             <groupId>org.slf4j</groupId>

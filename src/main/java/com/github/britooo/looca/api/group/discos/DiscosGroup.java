@@ -9,11 +9,6 @@ import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class DiscosGroup {
 
     private SystemInfo system = new SystemInfo();

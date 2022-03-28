@@ -8,11 +8,6 @@ import com.github.britooo.looca.api.group.processador.Processador;
 import com.github.britooo.looca.api.group.processos.ProcessosGroup;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Looca {
 
     private final Sistema sistema;

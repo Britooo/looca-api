@@ -4,12 +4,6 @@ import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
 import com.github.britooo.looca.api.util.Conversor;
 
-
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Memoria {
 
     private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();

@@ -3,11 +3,6 @@ package com.github.britooo.looca.api.group.processos;
 import oshi.software.os.OSProcess;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Processo {
 
     private final OSProcess processo;

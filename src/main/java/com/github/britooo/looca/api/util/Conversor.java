@@ -2,11 +2,6 @@ package com.github.britooo.looca.api.util;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Conversor {
 
     private static final long KIBI = 1L << 10;

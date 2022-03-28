@@ -7,11 +7,6 @@ import java.util.stream.Collectors;
 import oshi.software.os.OperatingSystem;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class ProcessosGroup {
 
     private final OperatingSystem os = new SystemInfo().getOperatingSystem();

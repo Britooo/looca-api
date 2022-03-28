@@ -3,11 +3,6 @@ package com.github.britooo.looca.api.group.temperatura;
 import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Temperatura {
 
     private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();

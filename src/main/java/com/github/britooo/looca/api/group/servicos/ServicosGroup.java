@@ -1,16 +1,10 @@
 package com.github.britooo.looca.api.group.servicos;
 
 import java.util.List;
-import java.util.Arrays;
 import oshi.SystemInfo;
 import java.util.stream.Collectors;
 import oshi.software.os.OSService;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class ServicosGroup {
 
     static enum STATUS {
@@ -51,7 +45,7 @@ public class ServicosGroup {
     }
 
     private List<OSService> recuperarServicosOshi() {
-        return Arrays.asList(this.sistema.getOperatingSystem().getServices());
+        return this.sistema.getOperatingSystem().getServices();
     }
 
     private static Servico of(OSService servico) {

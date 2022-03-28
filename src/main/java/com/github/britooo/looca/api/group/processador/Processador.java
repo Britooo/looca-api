@@ -8,11 +8,6 @@ import oshi.hardware.CentralProcessor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ExecutionException;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Processador {
 
     private ExecutorService executor = Executors.newSingleThreadExecutor();

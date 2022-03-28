@@ -2,11 +2,6 @@ package com.github.britooo.looca.api.group.discos;
 
 import oshi.software.os.OSFileStore;
 
-/**
- *
- * @author Diego Brito diego.lima@bandtec.com.br  @Britooo on Github
- * @author Giuliana Miniguiti giuliana.franca@bandtec.com.br  @miniguiti on Github
- */
 public class Volume {
 
     private final OSFileStore volume;
