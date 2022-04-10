@@ -1,5 +1,6 @@
 package com.github.britooo.looca.api.core;
 
+import com.github.britooo.looca.api.group.rede.Rede;
 import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 import com.github.britooo.looca.api.group.discos.DiscosGroup;
@@ -7,6 +8,7 @@ import com.github.britooo.looca.api.group.servicos.ServicosGroup;
 import com.github.britooo.looca.api.group.processador.Processador;
 import com.github.britooo.looca.api.group.processos.ProcessosGroup;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
+import oshi.SystemInfo;
 
 public class Looca {
 
@@ -17,8 +19,11 @@ public class Looca {
     private final DiscosGroup grupoDeDiscos;
     private final ServicosGroup grupoDeServicos;
     private final ProcessosGroup grupoDeProcessos;
+    private final Rede rede;
 
     public Looca() {
+        SystemInfo si = new SystemInfo();
+
         this.sistema = new Sistema();
         this.memoria = new Memoria();
         this.processador = new Processador();
@@ -26,6 +31,7 @@ public class Looca {
         this.grupoDeDiscos = new DiscosGroup();
         this.grupoDeServicos = new ServicosGroup();
         this.grupoDeProcessos = new ProcessosGroup();
+        this.rede = new Rede(si);
     }
 
     public Sistema getSistema() {
@@ -54,5 +60,9 @@ public class Looca {
 
     public ProcessosGroup getGrupoDeProcessos() {
         return grupoDeProcessos;
+    }
+
+    public Rede getRede() {
+        return rede;
     }
 }
