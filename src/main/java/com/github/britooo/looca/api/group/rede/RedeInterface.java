@@ -13,6 +13,14 @@ public class RedeInterface {
     this.redeInterface = redeInterface;
   }
 
+  public static RedeInterface of(NetworkIF redeInterface) {
+    if (redeInterface == null) {
+      return null;
+    }
+
+    return new RedeInterface(redeInterface);
+  }
+
   public String getNome() {
     return this.redeInterface.getName();
   }
