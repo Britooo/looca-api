@@ -3,6 +3,7 @@ package com.github.britooo.looca.api.core;
 import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 import com.github.britooo.looca.api.group.discos.DiscosGroup;
+import com.github.britooo.looca.api.group.dispositivos.DispositivosUsbGrupo;
 import com.github.britooo.looca.api.group.servicos.ServicosGroup;
 import com.github.britooo.looca.api.group.processador.Processador;
 import com.github.britooo.looca.api.group.processos.ProcessosGroup;
@@ -17,6 +18,7 @@ public class Looca {
     private final DiscosGroup grupoDeDiscos;
     private final ServicosGroup grupoDeServicos;
     private final ProcessosGroup grupoDeProcessos;
+    private final DispositivosUsbGrupo grupoDeDispositivosUsb;
 
     public Looca() {
         this.sistema = new Sistema();
@@ -26,6 +28,7 @@ public class Looca {
         this.grupoDeDiscos = new DiscosGroup();
         this.grupoDeServicos = new ServicosGroup();
         this.grupoDeProcessos = new ProcessosGroup();
+        this.grupoDeDispositivosUsb = new DispositivosUsbGrupo();
     }
 
     public Sistema getSistema() {
@@ -54,5 +57,9 @@ public class Looca {
 
     public ProcessosGroup getGrupoDeProcessos() {
         return grupoDeProcessos;
+    }
+
+    public DispositivosUsbGrupo getDispositivosUsbGrupo() {
+        return grupoDeDispositivosUsb;
     }
 }
