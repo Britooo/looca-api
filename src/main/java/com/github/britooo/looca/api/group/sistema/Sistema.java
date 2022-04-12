@@ -43,6 +43,10 @@ public class Sistema {
         return this.os.isElevated();
     }
 
+    public String getHostName(){
+        return this.os.getNetworkParams().getHostName();
+    }
+
     @Override
     public String toString() {
         return String.format("Sistema operacional: %s\nFabricante: %s\nArquitetura: %d bits.\nInicializado: %s\nTempo de atividade: %s\nPermissões:\n%s",
