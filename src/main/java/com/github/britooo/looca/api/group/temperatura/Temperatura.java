@@ -5,14 +5,18 @@ import oshi.hardware.HardwareAbstractionLayer;
 
 public class Temperatura {
 
-    private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
+  private final HardwareAbstractionLayer hardware;
 
-    public Double getTemperatura() {
-        return this.hardware.getSensors().getCpuTemperature();
-    }
+  public Temperatura() {
+    hardware = new SystemInfo().getHardware();
+  }
 
-    @Override
-    public String toString() {
-        return String.format("Temperatura: %.1f", getTemperatura());
-    }
+  public Double getTemperatura() {
+    return this.hardware.getSensors().getCpuTemperature();
+  }
+
+  @Override
+  public String toString() {
+    return String.format("Temperatura: %.1f", getTemperatura());
+  }
 }
