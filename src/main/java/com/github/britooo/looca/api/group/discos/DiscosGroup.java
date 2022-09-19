@@ -15,6 +15,10 @@ public class DiscosGroup {
     private final OperatingSystem os = system.getOperatingSystem();
     private final HardwareAbstractionLayer hal = system.getHardware();
 
+    /**
+     * Retorna uma lista de Volume.
+     * @return Lista de Volume.
+     */
     public List<Volume> getVolumes() {
         return this.os.getFileSystem().getFileStores()
                 .stream()
@@ -22,21 +26,37 @@ public class DiscosGroup {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Retorna uma lista de Disco.
+     * @return Lista de Disco.
+     */
     public List<Disco> getDiscos() {
         return this.hal.getDiskStores().stream()
                 .map(DiscosGroup::of)
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Retorna o tamanho dos discos somados em bytes.
+     * @return Tamanho dos discos somados em bytes.
+     */
     public Long getTamanhoTotal() {
         return this.getDiscos().stream()
                 .mapToLong(disco -> disco.getTamanho()).sum();
     }
 
+    /**
+     * Retorna a quantidade de discos existentes citados na lista de discos (Contagem total de discos)
+     * @return Soma total de discos.
+     */
     public Integer getQuantidadeDeDiscos() {
         return this.getDiscos().size();
     }
 
+    /**
+     * Retorna a quantidade de volumes existentes citados na lista de volumes (Contagem total de volumes)
+     * @return Soma total de volumes.
+     */
     public Integer getQuantidadeDeVolumes() {
         return this.getVolumes().size();
     }
