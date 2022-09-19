@@ -2,10 +2,10 @@ package com.github.britooo.looca.api.core;
 
 import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.memoria.Memoria;
-import com.github.britooo.looca.api.group.discos.DiscosGroup;
-import com.github.britooo.looca.api.group.servicos.ServicosGroup;
+import com.github.britooo.looca.api.group.discos.DiscoGrupo;
+import com.github.britooo.looca.api.group.servicos.ServicoGrupo;
 import com.github.britooo.looca.api.group.processador.Processador;
-import com.github.britooo.looca.api.group.processos.ProcessosGroup;
+import com.github.britooo.looca.api.group.processos.ProcessoGrupo;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
 
 public class Looca {
@@ -14,18 +14,18 @@ public class Looca {
     private final Memoria memoria;
     private final Processador processador;
     private final Temperatura temperatura;
-    private final DiscosGroup grupoDeDiscos;
-    private final ServicosGroup grupoDeServicos;
-    private final ProcessosGroup grupoDeProcessos;
+    private final DiscoGrupo grupoDeDiscos;
+    private final ServicoGrupo grupoDeServicos;
+    private final ProcessoGrupo grupoDeProcessos;
 
     public Looca() {
         this.sistema = new Sistema();
         this.memoria = new Memoria();
         this.processador = new Processador();
         this.temperatura = new Temperatura();
-        this.grupoDeDiscos = new DiscosGroup();
-        this.grupoDeServicos = new ServicosGroup();
-        this.grupoDeProcessos = new ProcessosGroup();
+        this.grupoDeDiscos = new DiscoGrupo();
+        this.grupoDeServicos = new ServicoGrupo();
+        this.grupoDeProcessos = new ProcessoGrupo();
     }
 
     public Sistema getSistema() {
@@ -44,15 +44,15 @@ public class Looca {
         return temperatura;
     }
 
-    public DiscosGroup getGrupoDeDiscos() {
+    public DiscoGrupo getGrupoDeDiscos() {
         return grupoDeDiscos;
     }
 
-    public ServicosGroup getGrupoDeServicos() {
+    public ServicoGrupo getGrupoDeServicos() {
         return grupoDeServicos;
     }
 
-    public ProcessosGroup getGrupoDeProcessos() {
+    public ProcessoGrupo getGrupoDeProcessos() {
         return grupoDeProcessos;
     }
 }
