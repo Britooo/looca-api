@@ -45,7 +45,7 @@ public class Processador {
      * NOTA: A ordem dos bytes retornados depende da plataforma e do software.
      * Os valores podem estar na ordem Big Endian ou Little Endian.
      *
-     * NOTA: Se o OSHI não conseguir determinar o ProcessorID a partir de fontes nativas,
+     * NOTA: Se o Looca não conseguir determinar o ProcessorID a partir de fontes nativas,
      * ele tentará reconstruir um a partir das informações disponíveis no identificador do processador.
      * @return ID do processador.
      */
