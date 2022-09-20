@@ -73,10 +73,10 @@ public class ProcessadorCacheLoader {
     long[] prevTicks = this.processador.getSystemCpuLoadTicks();
 
     ListenableFutureTask<Double> task = ListenableFutureTask.create(new Callable<Double>() {
-        public Double call() throws InterruptedException {
-          TimeUnit.SECONDS.sleep(1);
-          return processador.getSystemCpuLoadBetweenTicks(prevTicks) * 100;
-        }
+      public Double call() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(1);
+        return processador.getSystemCpuLoadBetweenTicks(prevTicks) * 100;
+      }
     });
 
     lExecutor.execute(task);

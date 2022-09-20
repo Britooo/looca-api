@@ -23,8 +23,8 @@ public class Sistema {
 
   /**
    * Obtém o número de bits (32 ou 64) do sistema operacional.
-   * 
-   * @return 
+   *
+   * @return Arquitetura bits.
    */
   public String getSistemaOperacional() {
     return sistemaOperacional;
@@ -32,7 +32,7 @@ public class Sistema {
 
   /**
    * Retorna a empresa fabricante do sistema operacional.
-   * 
+   *
    * @return Fabricante do sitema operacional.
    */
   public String getFabricante() {
@@ -41,7 +41,7 @@ public class Sistema {
 
   /**
    * Retorna o número de bits (32 ou 64) do sistema operacional.
-   * 
+   *
    * @return Número de bits do sistema operacional.
    */
   public Integer getArquitetura() {
@@ -50,7 +50,7 @@ public class Sistema {
 
   /**
    * Retorna o momento em que o sistema operacional foi inicializado.
-   * 
+   *
    * @return Tempo aproximado de inicialização do sistema em segundos desde o início da contagem Unix em 1° de Janeiro de 1970 UTC.
    */
   public Instant getInicializado() {
@@ -59,7 +59,7 @@ public class Sistema {
 
   /**
    * Retorna o tempo de funcionamento do sistema (tempo desde a inicialização).
-   * 
+   *
    * @return Quantidade de segundos desde a inicialização.
    */
   public Long getTempoDeAtividade() {
@@ -68,7 +68,7 @@ public class Sistema {
 
   /**
    * Retorna verdadeiro caso o processo atual tem permissões elevadas, como sudo/Administrador
-   * 
+   *
    * @return <code>True</code> se este processo tiver permissões elevadas
    */
   public Boolean getPermissao() {
