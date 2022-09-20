@@ -1,21 +1,12 @@
 package com.github.britooo.looca.api.group.processador;
 
 import oshi.SystemInfo;
-
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.Executors;
-
 import oshi.hardware.CentralProcessor;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ExecutionException;
 
 public class Processador {
 
-  private final ExecutorService executor = Executors.newSingleThreadExecutor();
-
   private final CentralProcessor processador = new SystemInfo().getHardware().getProcessor();
+  private final ProcessadorCacheLoader processadorCacheLoader = new ProcessadorCacheLoader();
 
   public String getFabricante() {
     return this.processador.getProcessorIdentifier().getVendor();
@@ -54,30 +45,7 @@ public class Processador {
   }
 
   public Double getUso() {
-
-    Double resultado = 0.0;
-    Future<Double> uso = getUsoOshi();
-
-    try {
-
-      while (!uso.isDone()) {
-        System.out.println("Coletando dados do processador...");
-        TimeUnit.SECONDS.sleep(2);
-      }
-      resultado = uso.get();
-    } catch (InterruptedException | ExecutionException e) {
-      e.printStackTrace();
-    }
-
-    return resultado;
-  }
-
-  private Future<Double> getUsoOshi() {
-    long[] prevTicks = this.processador.getSystemCpuLoadTicks();
-    return executor.submit(() -> {
-      TimeUnit.SECONDS.sleep(1);
-      return this.processador.getSystemCpuLoadBetweenTicks(prevTicks) * 100;
-    });
+    return this.processadorCacheLoader.getUso();
   }
 
   @Override
