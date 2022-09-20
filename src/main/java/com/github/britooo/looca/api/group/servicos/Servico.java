@@ -10,14 +10,33 @@ public class Servico {
     this.servico = servico;
   }
 
+  /**
+   * Obtém o ID do processo atual
+   * 
+   * @return ID do processo
+   */
   public Integer getPid() {
     return this.servico.getProcessID();
   }
 
+  /**
+   * Retorna o nome do serviço.
+   * 
+   * @return Nome do serviço.
+   */
   public String getNome() {
     return this.servico.getName();
   }
 
+  /**
+   * <p>
+   *  Retorna o estado do serviço.
+   * </p>
+   * 
+   * Ex: <code>STOPPED</code>, <code>RUNNING</code>
+   * 
+   * @return Estado do serviço
+   */
   public String getEstado() {
     return this.servico.getState().toString();
   }
