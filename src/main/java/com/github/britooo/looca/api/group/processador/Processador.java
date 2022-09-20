@@ -1,18 +1,13 @@
 package com.github.britooo.looca.api.group.processador;
 
 import oshi.SystemInfo;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.Executors;
 import oshi.hardware.CentralProcessor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ExecutionException;
 
 public class Processador {
 
-    private ExecutorService executor = Executors.newSingleThreadExecutor();
 
-    private final CentralProcessor processador = new SystemInfo().getHardware().getProcessor();
+  private final CentralProcessor processador = new SystemInfo().getHardware().getProcessor();
+  private final ProcessadorCacheLoader processadorCacheLoader = new ProcessadorCacheLoader();
 
     /**
      * <b>Retorna o nome do Fornecedor do processador.</b>
@@ -138,57 +133,53 @@ public class Processador {
      * @return Valor em porcentagem de uso do processador.
      */
     public Double getUso() {
-
-        Double resultado = 0.0;
-        Future<Double> uso = getUsoOshi();
-
-        try {
-
-            while (!uso.isDone()) {
-                System.out.println("Coletando dados do processador...");
-                TimeUnit.SECONDS.sleep(2);
-            }
-            resultado = uso.get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-        return resultado;
-    }
-
-
-    private Future<Double> getUsoOshi() {
-        long[] prevTicks = this.processador.getSystemCpuLoadTicks();
-        return executor.submit(() -> {
-            TimeUnit.SECONDS.sleep(1);
-            return this.processador.getSystemCpuLoadBetweenTicks(prevTicks) * 100;
-        });
+        return this.processadorCacheLoader.getUso();
     }
 
     @Override
     public String toString() {
-        return String.format(
-                "Fabricante: %s\n"
-                + "Nome: %s\n"
-                + "Id: %s\n"
-                + "Identificador: %s\n"
-                + "Microarquitetura: %s\n"
-                + "Frequência: %s\n"
-                + "Número de Pacotes Físicos: %s\n"
-                + "Número de CPUs Fisícas: %s\n"
-                + "Número de CPUs Lógicas: %S\n"
-                + "Em Uso: %.1f\n",
-                this.getFabricante(),
-                this.getNome(),
-                this.getId(),
-                this.getIdentificador(),
-                this.getMicroarquitetura(),
-                this.getFrequencia(),
-                this.getNumeroPacotesFisicos(),
-                this.getNumeroCpusFisicas(),
-                this.getNumeroCpusLogicas(),
-                this.getUso()
-        );
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append("Fabricante: ")
+                .append(getFabricante())
+                .append("\n");
+
+        sb.append("Nome: ")
+                .append(getNome())
+                .append("\n");
+
+        sb.append("ID: ")
+                .append(getId())
+                .append("\n");
+
+        sb.append("Identificador: ")
+                .append(getIdentificador())
+                .append("\n");
+
+        sb.append("Microarquitetura: ")
+                .append(getMicroarquitetura())
+                .append("\n");
+
+        sb.append("Frequência: ")
+                .append(getFrequencia())
+                .append("\n");
+
+        sb.append("Número de Pacotes Físicos: ")
+                .append(getNumeroPacotesFisicos())
+                .append("\n");
+
+        sb.append("Número de CPUs Fisícas: ")
+                .append(getNumeroCpusFisicas())
+                .append("\n");
+
+        sb.append("Número de CPUs Lógicas: ")
+                .append(getNumeroCpusLogicas())
+                .append("\n");
+
+        sb.append("Em Uso: ")
+                .append(String.format("%.1f", getUso()))
+                .append("\n");
+
+        return sb.toString();
     }
 }

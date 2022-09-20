@@ -4,6 +4,7 @@ import oshi.hardware.HWDiskStore;
 
 public class Disco {
 
+
     private final HWDiskStore disco;
 
     public Disco(HWDiskStore disco) {
@@ -107,31 +108,50 @@ public class Disco {
 
     @Override
     public String toString() {
-        StringBuilder str = new StringBuilder();
 
-        str.append("\nNome: %s\n");
-        str.append("Modelo: %s\n");
-        str.append("Serial: %s\n");
-        str.append("Tamanho: %s\n");
-        str.append("Leituras: %s\n");
-        str.append("BYtes de leitura: %s\n");
-        str.append("Escritas: %s\n");
-        str.append("Bytes de escritas: %s\n");
-        str.append("Tamanho atual da fila: %s\n");
-        str.append("Tempo de transferência: %s\n");
+        StringBuilder sb = new StringBuilder();
 
-        return String.format(
-                str.toString(),
-                getNome(),
-                getModelo(),
-                getSerial(),
-                getTamanho(),
-                getLeituras(),
-                getBytesDeLeitura(),
-                getEscritas(),
-                getBytesDeEscritas(),
-                getTamanhoAtualDaFila(),
-                getTempoDeTransferencia()
-        );
+        sb.append("\nNome: ")
+                .append(getNome())
+                .append("\n");
+
+        sb.append("Modelo: ")
+                .append(getModelo())
+                .append("\n");
+
+        sb.append("Serial: ")
+                .append(getSerial())
+                .append("\n");
+
+        sb.append("Tamanho: ")
+                .append(getTamanho())
+                .append("\n");
+
+        sb.append("Leituras: ")
+                .append(getLeituras())
+                .append("\n");
+
+        sb.append("Bytes de leitura: ")
+                .append(getBytesDeLeitura())
+                .append("\n");
+
+        sb.append("Escritas: ")
+                .append(getEscritas())
+                .append("\n");
+
+        sb.append("Bytes de escritas: ")
+                .append(getBytesDeEscritas())
+                .append("\n");
+
+        sb.append("Tamanho atual da fila: ")
+                .append(getTamanhoAtualDaFila())
+                .append("\n");
+
+        sb.append("Tempo de transferência: ")
+                .append(getTempoDeTransferencia())
+                .append("\n");
+
+        return sb.toString();
     }
+
 }

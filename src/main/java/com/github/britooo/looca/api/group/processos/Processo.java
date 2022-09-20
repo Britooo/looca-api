@@ -97,7 +97,29 @@ public class Processo {
 
     @Override
     public String toString() {
-        return String.format("PID:%d\nNome: %s\nUso CPU: %.1f\nUso memória: %.1f\nBytes utilizados: %s\nMemória virtual utilizada: %s",
-                this.getPid(), this.getNome(), this.getUsoCpu(), this.getUsoMemoria(), this.getBytesUtilizados(), this.getMemoriaVirtualUtilizada());
+
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append("PID: ").append(getPid())
+                .append("\n");
+
+        sb.append("Uso CPU: ")
+                .append(String.format("%.1f", getUsoCpu()))
+                .append("\n");
+
+        sb.append("Uso memória: ")
+                .append(String.format("%.1f", getUsoMemoria()))
+                .append("\n");
+
+        sb.append("Bytes utilizados: ")
+                .append(getBytesUtilizados())
+                .append("\n");
+
+        sb.append("Memória virtual utilizada: ")
+                .append(getMemoriaVirtualUtilizada())
+                .append("\n");
+
+        return sb.toString();
     }
+
 }

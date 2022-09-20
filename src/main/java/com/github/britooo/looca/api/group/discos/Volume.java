@@ -4,11 +4,11 @@ import oshi.software.os.OSFileStore;
 
 public class Volume {
 
-    private final OSFileStore volume;
+  private final OSFileStore volume;
 
-    public Volume(OSFileStore volume) {
-        this.volume = volume;
-    }
+  public Volume(OSFileStore volume) {
+    this.volume = volume;
+  }
 
     /**
      * <b>Retorna o UUID/GUID do sistema de arquivos.</b>
@@ -55,17 +55,18 @@ public class Volume {
         return this.volume.getMount();
     }
 
-    @Override
-    public String toString() {
 
-        StringBuilder str = new StringBuilder();
+  @Override
+  public String toString() {
 
-        str.append("UUID: " + this.getUUID() + "\n");
-        str.append("total: " + this.getTotal() + "\n");
-        str.append("disponível: " + this.getDisponivel() + "\n");
-        str.append("tipo: " + this.getTipo() + "\n");
-        str.append("ponto de montagem: " + this.getPontoDeMontagem() + "\n");
+    StringBuilder str = new StringBuilder();
 
-        return str.toString();
-    }
+    str.append("UUID: ").append(this.getUUID()).append("\n");
+    str.append("total: ").append(this.getTotal()).append("\n");
+    str.append("disponível: ").append(this.getDisponivel()).append("\n");
+    str.append("tipo: ").append(this.getTipo()).append("\n");
+    str.append("ponto de montagem: ").append(this.getPontoDeMontagem()).append("\n");
+
+    return str.toString();
+  }
 }

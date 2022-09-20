@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import oshi.software.os.OperatingSystem;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 
-public class ProcessosGroup {
+public class ProcessoGrupo {
 
     private final OperatingSystem os = new SystemInfo().getOperatingSystem();
 
@@ -38,7 +38,7 @@ public class ProcessosGroup {
     public List<Processo> getProcessos() {
         return this.os.getProcesses()
                 .stream()
-                .map(ProcessosGroup::of)
+                .map(ProcessoGrupo::of)
                 .collect(Collectors.toList());
     }
 
