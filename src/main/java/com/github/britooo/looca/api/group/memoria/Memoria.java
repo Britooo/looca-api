@@ -8,14 +8,26 @@ public class Memoria {
 
     private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
 
+    /**
+     * <b>Retorna a quantidade de memória física atualmente disponível, em bytes.</b>
+     * @return Quantidade de memória física atualmente disponível, em bytes.
+     */
     public Long getDisponivel() {
         return this.hardware.getMemory().getAvailable();
     }
 
+    /**
+     * <b>Retorna a quantidade de memória física real, em bytes.</b>
+     * @return Quantidade de memória física real, em bytes.
+     */
     public Long getTotal() {
         return this.hardware.getMemory().getTotal();
     }
 
+    /**
+     * <b>Retorna a quantidade de memória em uso, em bytes.</b>
+     * @return Quantidade de memória em uso, em bytes.
+     */
     public Long getEmUso() {
         return this.getTotal() - this.getDisponivel();
     }
