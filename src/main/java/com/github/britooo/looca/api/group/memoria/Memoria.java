@@ -6,37 +6,52 @@ import com.github.britooo.looca.api.util.Conversor;
 
 public class Memoria {
 
-  private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
 
-  public Long getDisponivel() {
-    return this.hardware.getMemory().getAvailable();
-  }
 
-  public Long getTotal() {
-    return this.hardware.getMemory().getTotal();
-  }
+    private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
 
-  public Long getEmUso() {
-    return this.getTotal() - this.getDisponivel();
-  }
+    /**
+     * <b>Retorna a quantidade de memória física atualmente disponível, em bytes.</b>
+     * @return Quantidade de memória física atualmente disponível, em bytes.
+     */
+    public Long getDisponivel() {
+        return this.hardware.getMemory().getAvailable();
+    }
 
-  @Override
-  public String toString() {
+    /**
+     * <b>Retorna a quantidade de memória física real, em bytes.</b>
+     * @return Quantidade de memória física real, em bytes.
+     */
+    public Long getTotal() {
+        return this.hardware.getMemory().getTotal();
+    }
 
-    final StringBuilder sb = new StringBuilder("Memoria").append("\n");
+    /**
+     * <b>Retorna a quantidade de memória em uso, em bytes.</b>
+     * @return Quantidade de memória em uso, em bytes.
+     */
+    public Long getEmUso() {
+        return this.getTotal() - this.getDisponivel();
+    }
 
-    sb.append("Em uso: ")
+@Override
+public String toString(){
+
+final StringBuilder sb=new StringBuilder("Memoria").append("\n");
+
+        sb.append("Em uso: ")
         .append(Conversor.formatarBytes(getEmUso()))
         .append("\n");
 
-    sb.append("Disponível: ")
+        sb.append("Disponível: ")
         .append(Conversor.formatarBytes(getDisponivel()))
         .append("\n");
 
-    sb.append("Total: ")
+        sb.append("Total: ")
         .append(Conversor.formatarBytes(getTotal()))
         .append("\n");
 
-    return sb.toString();
-  }
+        return sb.toString();
+    }
+
 }
