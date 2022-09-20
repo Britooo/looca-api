@@ -7,6 +7,7 @@ import com.github.britooo.looca.api.util.Conversor;
 public class Memoria {
 
 
+
     private final HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
 
     /**
@@ -52,4 +53,5 @@ final StringBuilder sb=new StringBuilder("Memoria").append("\n");
 
         return sb.toString();
     }
+
 }

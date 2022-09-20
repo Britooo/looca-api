@@ -6,6 +6,7 @@ import oshi.hardware.CentralProcessor;
 public class Processador {
 
 
+
   private final CentralProcessor processador = new SystemInfo().getHardware().getProcessor();
   private final ProcessadorCacheLoader processadorCacheLoader = new ProcessadorCacheLoader();
 
@@ -182,4 +183,5 @@ public class Processador {
 
         return sb.toString();
     }
+
 }

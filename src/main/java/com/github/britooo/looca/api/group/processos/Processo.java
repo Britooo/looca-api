@@ -5,6 +5,7 @@ import com.github.britooo.looca.api.group.memoria.Memoria;
 
 public class Processo {
 
+
     private final OSProcess processo;
     private final Memoria memoria;
 

@@ -10,6 +10,7 @@ public class Volume {
     this.volume = volume;
   }
 
+
     /**
      * <b>Retorna o UUID/GUID do sistema de arquivos.</b>
      * @return UUID/GUID do sistema de arquivos.
@@ -66,6 +67,7 @@ public class Volume {
     str.append("disponível: ").append(this.getDisponivel()).append("\n");
     str.append("tipo: ").append(this.getTipo()).append("\n");
     str.append("ponto de montagem: ").append(this.getPontoDeMontagem()).append("\n");
+
 
     return str.toString();
   }
