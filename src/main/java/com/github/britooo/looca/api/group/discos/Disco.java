@@ -84,7 +84,7 @@ public class Disco {
 
   /**
    * <p><b>Retorna o comprimento da fila de disco (E/S's em andamento).</b></p>
-   * <br/>
+   * <br>
    * <p>Inclui solicitações de E/S que foram emitidas para o driver de dispositivo,
    * mas ainda não foram concluídas. Não compatível com macOS.</p>
    *

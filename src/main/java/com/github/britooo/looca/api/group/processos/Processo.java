@@ -16,7 +16,7 @@ public class Processo {
 
   /**
    * <p><b>Retorna o ID do processo.</b></p>
-   * <br/>
+   * <br>
    * <p>Embora seja um valor de 32 bits, ele não é assinado no Windows e,
    * em circunstâncias extremamente raras, pode retornar um valor negativo.</p>
    *
@@ -37,7 +37,7 @@ public class Processo {
 
   /**
    * <p><b>Retorna o valor percentual de uso da CPU pelo processo.</b></p>
-   * <br/>
+   * <br>
    * <p>
    * Por meio do cálculo: (100d * (o número de milissegundos que o processo executou no modo kernel/sistema.
    * +
@@ -56,7 +56,7 @@ public class Processo {
   /**
    * <p><b>Retorna no Windows o tamanho do Conjunto de Trabalho Privado, que deve corresponder à coluna "Memória" no Gerenciador de Tarefas do Windows.</b></p>
    * <p><b>Retorna no Linux o valor RSS de /proc/[pid]/stat, que pode ser impreciso devido a uma otimização de escalabilidade interna do kernel. Se forem necessários valores precisos, leia /proc/[pid]/smaps usando <code>FileUtil.getKeyValueMapFromFile(String, String)</code>.</b></p>
-   * <br/>
+   * <br>
    * <p>E por meio do cálculo: (100d * Obtém o tamanho do conjunto residente (RSS). Usado para mostrar quanta memória está alocada para esse processo e está na RAM. Não inclui memória que é trocada. Inclui memória de bibliotecas compartilhadas, desde que as páginas dessas bibliotecas estejam realmente na memória. Inclui toda a memória de pilha e heap.
    * Retorna (o tamanho do conjunto residente / A quantidade de memória física real, em bytes).</p>
    *
@@ -68,13 +68,13 @@ public class Processo {
 
   /**
    * <p><b>Retorna o tamanho do conjunto residente (RSS). Usado para mostrar quanta memória está alocada para esse processo e está na RAM.</b></p>
-   * <br/>
+   * <br>
    * <p>Não inclui memória que é trocada. Inclui memória de bibliotecas compartilhadas,
    * desde que as páginas dessas bibliotecas estejam realmente na memória.
    * Inclui toda a memória de pilha e heap.
    * No Windows, retorna o tamanho do Conjunto de Trabalho Privado,
    * que deve corresponder à coluna "Memória" no Gerenciador de Tarefas do Windows.</p>
-   * <br/>
+   * <br>
    * <p>
    * No Linux, retorna o valor RSS de /proc/[pid]/stat,
    * que pode ser impreciso devido a uma otimização de escalabilidade interna do kernel.
@@ -90,7 +90,7 @@ public class Processo {
 
   /**
    * <p><b>Retorna o tamanho da memória virtual (VSZ).</b></p>
-   * <br/>
+   * <br>
    * <p>Inclui toda a memória que o processo pode acessar,
    * incluindo memória que é trocada e memória que é de bibliotecas compartilhadas.</p>
    *

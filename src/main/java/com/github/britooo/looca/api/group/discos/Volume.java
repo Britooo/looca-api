@@ -31,7 +31,7 @@ public class Volume {
 
   /**
    * <p><b>Retorna o espaço livre na unidade.</b></p>
-   * <br/>
+   * <br>
    * <p>Esse espaço não é alocado, mas pode exigir permissões elevadas para gravação (Em bytes).</p>
    *
    * @return Espaço livre na unidade (Em bytes).
@@ -51,7 +51,7 @@ public class Volume {
 
   /**
    * <p><b>Retorna o ponto de montagem do sistema de arquivos.</b></p>
-   * <br/>
+   * <br>
    * <p>O diretório que os usuários normalmente usarão para interagir com o armazenamento de arquivos.
    * <i>(Exemplo C: no Windows ou / no Linux)</i>.</p>
    *

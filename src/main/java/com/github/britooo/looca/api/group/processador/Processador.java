@@ -29,7 +29,7 @@ public class Processador {
 
   /**
    * <p><b>Retorna o ID do processador.</b></p>
-   * <br/>
+   * <br>
    * <p>Esta é uma <code>String</code> hexadecimal representando um valor de 8 bytes,
    * normalmente obtido usando o opcode CPUID com o registrador EAX definido como 1.
    * Os primeiros quatro bytes são o conteúdo resultante do registrador EAX,
@@ -39,10 +39,10 @@ public class Processador {
    * este campo é preenchido com uma <code>String</code> hexadecimal comparável.
    * <p>Por exemplo, os processadores ARM preencherão os primeiros 32 bytes com o MIDR.
    * Os processadores AIX PowerPC retornarão o ID da máquina.</p>
-   * <br/>
+   * <br>
    * <p><b>NOTA: A ordem dos bytes retornados depende da plataforma e do software.
    * Os valores podem estar na ordem Big Endian ou Little Endian.</b></p>
-   * <br/>
+   * <br>
    * <p><b>NOTA: Se o Looca não conseguir determinar o ProcessorID a partir de fontes nativas,
    * ele tentará reconstruir um a partir das informações disponíveis no identificador do processador.</b></p>
    *
@@ -115,28 +115,28 @@ public class Processador {
 
   /**
    * <p><b>Retorna a porcentagem de uso do processador, por meio dos contadores de ticks de carga de CPU em todo o sistema.</b></p>
-   * <br/>
+   * <br>
    * <p>
    * Por meio de  um array com oito elementos representando milissegundos gastos nos estados:
    * User (0), Nice (1), System (2), Idle (3), IOwait (4), Hardware interrupts (IRQ) (5),
    * Software interrupts/DPC (SoftIRQ) ) (6) ou Steal (7).</p>
-   * <br/>
+   * <br>
    * <p>Ao medir a diferença entre os ticks em um intervalo de tempo,
    * a carga da CPU nesse intervalo pode ser calculada.
    * Observe que, embora os contadores de tiques estejam em unidades de milissegundos,
    * eles podem avançar em incrementos maiores junto com tiques de clock (dependentes da plataforma).
    * Por exemplo, por padrão, os tiques do clock do Windows são 1/64 de segundo (cerca de 15 ou 16 milissegundos) e os tiques do Linux dependem da distribuição e da configuração,
    * mas geralmente 1/100 de segundo (10 milissegundos).</p>
-   * <br/>
+   * <br>
    * <p>As informações de Nice e IOWait não estão disponíveis no Windows,
    * e as informações de IOwait e IRQ não estão disponíveis no macOS, portanto,
    * esses ticks sempre serão zero.</p>
-   * <br/>
+   * <br>
    * <p>Para calcular o tempo de inatividade geral usando esse método,
    * inclua os tiques de inatividade e IOWait. Da mesma forma, os ticks de IRQ,
    * SoftIRQ e Steal devem ser adicionados ao valor do sistema para obter o total.
    * Os tiques do sistema também incluem o tempo de execução de outros hosts virtuais (steal).</p>
-   * <br/>
+   * <br>
    * <p>Com isso fazemos o cálculo necessário para a medição em porcentagem do uso do processador.</p>
    *
    * @return Valor em porcentagem de uso do processador.
