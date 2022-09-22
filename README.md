@@ -57,7 +57,6 @@ O objeto Sistema por sua vez, também possui **getters** que devolvem informaç�
 sistema.getPermissao();
 sistema.getFabricante();
 sistema.getArquitetura();
-sistema.getArquitetura();
 sistema.getInicializado();
 sistema.getSistemaOperacional();
 ```
