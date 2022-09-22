@@ -13,20 +13,20 @@ public class Temperatura {
 
   /**
    * <p>
-   *   Retorna a temperatura da CPU em graus Celsius se disponível, caso contrário retorna 0 ou Double.NaN.
+   * Retorna a temperatura da CPU em graus Celsius se disponível, caso contrário retorna 0 ou Double.NaN.
    * </p>
    *
    * <p>
-   *   No Windows, se não estiver executando o Open Hardware Monitor, 
-   *   requer permissões elevadas e BIOS de hardware que ofereça suporte à publicação no WMI. 
-   *   Neste caso, retorna a temperatura da "Zona Térmica" que pode ser diferente da temperatura da CPU 
-   *   obtida de outras fontes.
+   * No Windows, se não estiver executando o Open Hardware Monitor,
+   * requer permissões elevadas e BIOS de hardware que ofereça suporte à publicação no WMI.
+   * Neste caso, retorna a temperatura da "Zona Térmica" que pode ser diferente da temperatura da CPU
+   * obtida de outras fontes.
    * </p>
-   * 
+   *
    * <p>
-   *   Além disso, algumas placas-mãe só podem atualizar esse valor em determinados eventos.
+   * Além disso, algumas placas-mãe só podem atualizar esse valor em determinados eventos.
    * <p>
-   * 
+   *
    * @return Temperatura em graus Celsius caso disponível
    */
   public Double getTemperatura() {

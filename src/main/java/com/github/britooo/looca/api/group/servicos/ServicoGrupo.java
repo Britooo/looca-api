@@ -19,7 +19,7 @@ public class ServicoGrupo {
 
   /**
    * Devolve uma lista com todos os serviços
-   * 
+   *
    * @return Lista com todos os serviços
    */
   public List<Servico> getServicos() {
@@ -28,7 +28,7 @@ public class ServicoGrupo {
 
   /**
    * Retorna a quantidade de serviços
-   * 
+   *
    * @return Quantidade de serviços
    */
   public Integer getTotalDeServicos() {
@@ -37,7 +37,7 @@ public class ServicoGrupo {
 
   /**
    * Lista todos os serviços cujo o status é <code>RUNNING</code> (ou em execução)
-   * 
+   *
    * @return Lista de serviços ativos
    */
   public List<Servico> getServicosAtivos() {
@@ -49,7 +49,7 @@ public class ServicoGrupo {
 
   /**
    * Retorna a quantidade de serviços em execução
-   * 
+   *
    * @return Quantidade de serviços em execução
    */
   public Integer getTotalServicosAtivos() {
@@ -58,7 +58,7 @@ public class ServicoGrupo {
 
   /**
    * Lista todos os serviços cujo o status é <code>STOPPED</code> (ou inativo)
-   * 
+   *
    * @return Lista de serviços inativos
    */
   public List<Servico> getServicosInativos() {
@@ -70,7 +70,7 @@ public class ServicoGrupo {
 
   /**
    * Retorna a quantidade de serviços inativos
-   * 
+   *
    * @return Quantidade de serviços inativos
    */
   public Integer getTotalServicosInativos() {
