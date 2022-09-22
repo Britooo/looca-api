@@ -34,7 +34,7 @@ public class ProcessoGrupo {
 
   /**
    * <p><b>Retorna os processos em execução no momento. Nenhum pedido é garantido.</b></p>
-   * <br/>
+   * <br>
    * <p>Sendo uma lista de objetos <code>OSProcess</code> para o número especificado (ou todos) de processos atualmente em execução,
    * classificados conforme especificado.
    * A lista pode conter elementos nulos ou processos com estado <code>OSProcess.State.INVALID</code> se um processo for encerrado durante a iteração.</p>
