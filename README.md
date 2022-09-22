@@ -2,7 +2,7 @@
 [![Looca API](./readme/readmes.gif)]()
 # Log of Computer Activity
 
-### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade [@Bandtec](https://github.com/BandTec) em projetos na disciplina de Pesquisa e Inovação.
+### **Looca** é uma API que coleta dados de maquina e foi desenvolvida para facilitar o aprendizado em contextos acadêmicos. Esse projeto visa ajudar os alunos da Faculdade [@SPTech](https://github.com/BandTec) em projetos na disciplina de Pesquisa e Inovação.
 # 
 
 ![Badge](https://img.shields.io/badge/Code-Java-F76911?&logo=java) 
@@ -38,9 +38,9 @@ private final Sistema sistema;
 private final Memoria memoria;
 private final Processador processador;
 private final Temperatura temperatura;
-private final DiscosGroup grupoDeDiscos;
-private final ServicosGroup grupoDeServicos;
-private final ProcessosGroup grupoDeProcessos;
+private final DiscoGrupo grupoDeDiscos;
+private final ServicoGrupo grupoDeServicos;
+private final ProcessoGrupo grupoDeProcessos;
 ```
 
 **Coletando dados do sistema operacional**
@@ -84,7 +84,7 @@ Para lidar com objetos que retornam mais de uma instância (lista) da informaç�
 
 ```java
 //Criação do gerenciador
-DiscosGroup grupoDeDiscos = looca.getGrupoDeDiscos();
+DiscoGrupo grupoDeDiscos = looca.getGrupoDeDiscos();
 
 //Obtendo lista de discos a partir do getter
 List<Disco> discos = grupoDeDiscos.getDiscos();
