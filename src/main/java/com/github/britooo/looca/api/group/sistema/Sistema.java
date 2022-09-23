@@ -22,16 +22,16 @@ public class Sistema {
   }
 
   /**
-   * Obtém o número de bits (32 ou 64) do sistema operacional.
+   * Retorna o <b>Sistema Operacional</b>.
    *
-   * @return Arquitetura bits.
+   * @return Sistema Operacional.
    */
   public String getSistemaOperacional() {
     return sistemaOperacional;
   }
 
   /**
-   * Retorna a empresa fabricante do sistema operacional.
+   * Retorna a <b>empresa fabricante</b> do sistema operacional.
    *
    * @return Fabricante do sitema operacional.
    */
@@ -40,41 +40,45 @@ public class Sistema {
   }
 
   /**
-   * Retorna o número de bits (32 ou 64) do sistema operacional.
+   * Retorna o número de <b>bits</b> <i>(32 ou 64)</i> do sistema operacional.
    *
-   * @return Número de bits do sistema operacional.
+   * @return Número de <b>bits</b> do sistema operacional.
    */
   public Integer getArquitetura() {
     return arquitetura;
   }
 
   /**
-   * Retorna o momento em que o sistema operacional foi inicializado.
+   * Retorna o <b>momento</b> em que o sistema operacional foi <b>inicializado</b>.
    *
-   * @return Tempo aproximado de inicialização do sistema em segundos desde o início da contagem Unix em 1° de Janeiro de 1970 UTC.
+   * @return Data aproximada da inicialização do sistema operacional.
    */
   public Instant getInicializado() {
     return Instant.ofEpochSecond(this.os.getSystemBootTime());
   }
 
   /**
-   * Retorna o tempo de funcionamento do sistema (tempo desde a inicialização).
+   * Retorna o <b>tempo de funcionamento</b> do sistema <b>(tempo desde a inicialização)</b>.
    *
-   * @return Quantidade de segundos desde a inicialização.
+   * @return Quantidade de <b>segundos</b> desde a inicialização.
    */
   public Long getTempoDeAtividade() {
     return this.os.getSystemUptime();
   }
 
   /**
-   * Retorna verdadeiro caso o processo atual tem permissões elevadas, como sudo/Administrador
+   * Retorna <b><code>True</code></b> caso o processo atual tem <b>permissões elevadas</b>, como <i>sudo/Administrador</i>.
    *
-   * @return <code>True</code> se este processo tiver permissões elevadas
+   * @return <code>True</code> se este processo tiver permissões elevadas.
    */
   public Boolean getPermissao() {
     return this.os.isElevated();
   }
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Sistema Operacional</b>.
+   * @return <code>String</code> que contém todas as informações relacionadas ao <b>Sistema Operacional</b.
+   */
   @Override
   public String toString() {
 

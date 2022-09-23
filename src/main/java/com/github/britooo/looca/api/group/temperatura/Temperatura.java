@@ -13,18 +13,18 @@ public class Temperatura {
 
   /**
    * <p>
-   * Retorna a temperatura da CPU em graus Celsius se disponível, caso contrário retorna 0 ou Double.NaN.
+   * Retorna a <b>temperatura</b> da CPU em <b>graus Celsius</b> se disponível, caso contrário <b>retorna 0 ou Double.NaN</b>.
    * </p>
    *
    * <p>
-   * No Windows, se não estiver executando o Open Hardware Monitor,
+   * No <b>Windows</b>, se não estiver executando o Open Hardware Monitor,
    * requer permissões elevadas e BIOS de hardware que ofereça suporte à publicação no WMI.
    * Neste caso, retorna a temperatura da "Zona Térmica" que pode ser diferente da temperatura da CPU
    * obtida de outras fontes.
    * </p>
    *
    * <p>
-   * Além disso, algumas placas-mãe só podem atualizar esse valor em determinados eventos.
+   * Além disso, <b>algumas placas-mãe só podem atualizar esse valor em determinados eventos</b>.
    * <p>
    *
    * @return Temperatura em graus Celsius caso disponível
@@ -33,6 +33,10 @@ public class Temperatura {
     return this.hardware.getSensors().getCpuTemperature();
   }
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas a <b>Temperatura</b>.
+   * @return <code>String</code> com todas as informações relacionadas a <b>Temperatura</b>.
+   */
   @Override
   public String toString() {
     return String.format("Temperatura: %.1f", getTemperatura());

@@ -28,30 +28,58 @@ public class Looca {
     this.grupoDeProcessos = new ProcessoGrupo();
   }
 
+  /**
+   * Retorna um <b>Objeto de Sistema</b> que contém métodos relacionados a coleta de informações do <b>Sistema Operacional</b>.
+   * @return Objeto Sistema.
+   */
   public Sistema getSistema() {
     return sistema;
   }
 
+  /**
+   * Retorna um <b>Objeto de Memoria</b> que contém métodos relacionados a coleta de informações da <b>Memória RAM</b>.
+   * @return Objeto Memoria.
+   */
   public Memoria getMemoria() {
     return memoria;
   }
 
+  /**
+   * Retorna um <b>Objeto de Processador</b> que contém métodos relacionados a coleta de informações do <b>Processador</b>.
+   * @return Objeto Processador.
+   */
   public Processador getProcessador() {
     return processador;
   }
 
+  /**
+   * Retorna um <b>Objeto de Temperatura</b> que contém métodos relacionados a coleta de informações de <b>Temperatura</b>.
+   * @return Objeto Temperatura.
+   */
   public Temperatura getTemperatura() {
     return temperatura;
   }
 
+  /**
+   * Retorna um <b>Objeto de DiscoGrupo</b> que contém métodos relacionados a coleta de informações do <b>Grupo de Discos</b>.
+   * @return Objeto DiscoGrupo.
+   */
   public DiscoGrupo getGrupoDeDiscos() {
     return grupoDeDiscos;
   }
 
+  /**
+   * Retorna um <b>Objeto de ServicoGrupo</b> que contém métodos relacionados a coleta de informações do <b>Grupo de Serviços</b>.
+   * @return Objeto ServicoGrupo.
+   */
   public ServicoGrupo getGrupoDeServicos() {
     return grupoDeServicos;
   }
 
+  /**
+   * Retorna um <b>Objeto de ProcessoGrupo</b> que contém métodos relacionados a coleta de informações do <b>Grupo de Processos</b>.
+   * @return Objeto ProcessoGrupo.
+   */
   public ProcessoGrupo getGrupoDeProcessos() {
     return grupoDeProcessos;
   }

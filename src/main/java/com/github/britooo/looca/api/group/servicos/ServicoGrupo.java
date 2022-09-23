@@ -69,9 +69,9 @@ public class ServicoGrupo {
   }
 
   /**
-   * Retorna a quantidade de serviços inativos
+   * Retorna a quantidade de <b>serviços inativos</b>.
    *
-   * @return Quantidade de serviços inativos
+   * @return Quantidade de serviços inativos.
    */
   public Integer getTotalServicosInativos() {
     return this.getServicosInativos().size();

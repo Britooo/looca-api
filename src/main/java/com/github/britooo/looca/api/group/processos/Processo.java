@@ -15,7 +15,7 @@ public class Processo {
   }
 
   /**
-   * <p><b>Retorna o ID do processo.</b></p>
+   * <p>Retorna o <b>ID do processo</b>.</p>
    * <br>
    * <p>Embora seja um valor de 32 bits, ele não é assinado no Windows e,
    * em circunstâncias extremamente raras, pode retornar um valor negativo.</p>
@@ -27,7 +27,7 @@ public class Processo {
   }
 
   /**
-   * <b>Retorna o nome do processo, geralmente o programa executável.</b>
+   * Retorna o <b>nome do processo</b>, geralmente o programa executável.
    *
    * @return Nome do processo, geralmente o programa executável.
    */
@@ -36,7 +36,7 @@ public class Processo {
   }
 
   /**
-   * <p><b>Retorna o valor percentual de uso da CPU pelo processo.</b></p>
+   * <p>Retorna o valor percentual de <b>uso da CPU pelo processo</b>.</p>
    * <br>
    * <p>
    * Por meio do cálculo: (100d * (o número de milissegundos que o processo executou no modo kernel/sistema.
@@ -54,8 +54,8 @@ public class Processo {
   }
 
   /**
-   * <p><b>Retorna no Windows o tamanho do Conjunto de Trabalho Privado, que deve corresponder à coluna "Memória" no Gerenciador de Tarefas do Windows.</b></p>
-   * <p><b>Retorna no Linux o valor RSS de /proc/[pid]/stat, que pode ser impreciso devido a uma otimização de escalabilidade interna do kernel. Se forem necessários valores precisos, leia /proc/[pid]/smaps usando <code>FileUtil.getKeyValueMapFromFile(String, String)</code>.</b></p>
+   * <p>Retorna no <b>Windows</b> o tamanho do Conjunto de Trabalho Privado, que deve corresponder à coluna "Memória" no Gerenciador de Tarefas do Windows.</p>
+   * <p>Retorna no <b>Linux</b> o valor RSS de /proc/[pid]/stat, que pode ser impreciso devido a uma otimização de escalabilidade interna do kernel. Se forem necessários valores precisos, leia /proc/[pid]/smaps usando <code>FileUtil.getKeyValueMapFromFile(String, String)</code>.</p>
    * <br>
    * <p>E por meio do cálculo: (100d * Obtém o tamanho do conjunto residente (RSS). Usado para mostrar quanta memória está alocada para esse processo e está na RAM. Não inclui memória que é trocada. Inclui memória de bibliotecas compartilhadas, desde que as páginas dessas bibliotecas estejam realmente na memória. Inclui toda a memória de pilha e heap.
    * Retorna (o tamanho do conjunto residente / A quantidade de memória física real, em bytes).</p>
@@ -67,29 +67,29 @@ public class Processo {
   }
 
   /**
-   * <p><b>Retorna o tamanho do conjunto residente (RSS). Usado para mostrar quanta memória está alocada para esse processo e está na RAM.</b></p>
+   * <p>Retorna o tamanho do conjunto residente (RSS). Usado para mostrar quanta memória está alocada para esse processo e está na RAM.</p>
    * <br>
    * <p>Não inclui memória que é trocada. Inclui memória de bibliotecas compartilhadas,
    * desde que as páginas dessas bibliotecas estejam realmente na memória.
    * Inclui toda a memória de pilha e heap.
-   * No Windows, retorna o tamanho do Conjunto de Trabalho Privado,
+   * No <b>Windows</b>, retorna o tamanho do Conjunto de Trabalho Privado,
    * que deve corresponder à coluna "Memória" no Gerenciador de Tarefas do Windows.</p>
    * <br>
    * <p>
-   * No Linux, retorna o valor RSS de /proc/[pid]/stat,
+   * No <b>Linux</b>, retorna o valor RSS de /proc/[pid]/stat,
    * que pode ser impreciso devido a uma otimização de escalabilidade interna do kernel.
    * Se forem necessários valores precisos, leia /proc/[pid]/smaps usando
    * <code>FileUtil.getKeyValueMapFromFile(String, String)</code>.
    * </p>
    *
-   * @return Tamanho do conjunto residente (ou Quantidade de bytes utilizados).
+   * @return Tamanho do conjunto residente (ou Quantidade de <b>bytes</b> utilizados).
    */
   public Long getBytesUtilizados() {
     return processo.getResidentSetSize();
   }
 
   /**
-   * <p><b>Retorna o tamanho da memória virtual (VSZ).</b></p>
+   * <p>Retorna o <b>tamanho da memória virtual (VSZ)</b>.</p>
    * <br>
    * <p>Inclui toda a memória que o processo pode acessar,
    * incluindo memória que é trocada e memória que é de bibliotecas compartilhadas.</p>
@@ -100,6 +100,10 @@ public class Processo {
     return processo.getVirtualSize();
   }
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Processo</b>.
+   * @return <code>String</code> com todas as informações relacionadas ao <b>Grupo de Processos</b>.
+   */
   @Override
   public String toString() {
 

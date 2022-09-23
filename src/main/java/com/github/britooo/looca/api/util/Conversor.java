@@ -12,6 +12,12 @@ public class Conversor {
     private static final long PEBI = 1L << 50;
     private static final long EXBI = 1L << 60;
 
+    /**
+     * Retorna uma <code>String</code> com o valor em <b>bytes</b> convertidos em sua ordem de grandeza equivalente.
+     * @param bytes
+     * Corresponde a quantidade de <b>bytes</b> <i>(Ex: 1000000000 bytes -> 1 Gigabyte)</i>.
+     * @return Retorna uma <code>String</code> que corresponde aos <b>bytes</b> convertidos em sua ordem de grandeza equivalente.
+     */
     public static String formatarBytes(long bytes) {
         if (bytes == 1L) { // bytes
             return String.format("%d byte", bytes);
@@ -31,7 +37,13 @@ public class Conversor {
             return formatarUnidades(bytes, EXBI, "EiB");
         }
     }
-    
+
+    /**
+     * Retorna uma <code>String</code> com <b>segundos</b> convertidos em <b>data</b>;
+     * @param secs
+     * Corresponde aos segundos.
+     * @return Devolve uma <code>String</code> com os <b>segundos</b> convertidos em <b>data</b>.
+     */
     public static String formatarSegundosDecorridos(long secs) {
         
         long eTime = secs;
