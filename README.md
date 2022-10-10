@@ -15,7 +15,7 @@
 <dependency>
   <groupId>com.github.britooo</groupId>
   <artifactId>looca-api</artifactId>
-  <version>2.0.0</version>
+  <version>--INSIRA A VERSÃO ATUAL--</version>
 </dependency>
 ```
 
