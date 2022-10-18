@@ -21,7 +21,31 @@ public class Volume {
   }
 
   /**
-   * Retorna <b>espaço/capacidade total</b> da unidade <b>(Em bytes)</b>.
+   * <p>
+   *  Nome do sistema de arquivos. Um identificador legível que não necessariamente corresponde
+   *  a um caminho no sistema de arquivos.
+   * </p>
+   * 
+   * @return Nome do sistema de arquivos
+   */
+  public String getNome() {
+    return this.volume.getName();
+  }
+
+  /**
+   * <p>
+   *  Nome do volume do sistema de arquivos. Geralmente um caminho que representa o dispositivo
+   *  (ex: /dev/foo) que foi montado.
+   * </p>
+   * 
+   * @return Nome do volume do sistema de arquivos
+   */
+  public String getVolume() {
+    return this.volume.getVolume();
+  }
+
+  /**
+   * <b>Retorna espaço/capacidade total da unidade (Em bytes).</b>
    *
    * @return Espaço/capacidade total da unidade <b>(Em bytes)</b>.
    */
@@ -72,6 +96,8 @@ public class Volume {
     StringBuilder str = new StringBuilder();
 
     str.append("UUID: ").append(this.getUUID()).append("\n");
+    str.append("nome: ").append(this.getNome()).append("\n");
+    str.append("volume: ").append(this.getVolume()).append("\n");
     str.append("total: ").append(this.getTotal()).append("\n");
     str.append("disponível: ").append(this.getDisponivel()).append("\n");
     str.append("tipo: ").append(this.getTipo()).append("\n");
