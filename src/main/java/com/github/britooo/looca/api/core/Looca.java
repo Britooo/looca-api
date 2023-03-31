@@ -1,5 +1,7 @@
 package com.github.britooo.looca.api.core;
 
+import com.github.britooo.looca.api.group.janelas.JanelaGroup;
+import com.github.britooo.looca.api.group.rede.Rede;
 import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 import com.github.britooo.looca.api.group.discos.DiscoGrupo;
@@ -7,52 +9,67 @@ import com.github.britooo.looca.api.group.servicos.ServicoGrupo;
 import com.github.britooo.looca.api.group.processador.Processador;
 import com.github.britooo.looca.api.group.processos.ProcessoGrupo;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
+import oshi.SystemInfo;
 
 public class Looca {
 
-  private final Sistema sistema;
-  private final Memoria memoria;
-  private final Processador processador;
-  private final Temperatura temperatura;
-  private final DiscoGrupo grupoDeDiscos;
-  private final ServicoGrupo grupoDeServicos;
-  private final ProcessoGrupo grupoDeProcessos;
+    private final Sistema sistema;
+    private final Memoria memoria;
+    private final Processador processador;
+    private final Temperatura temperatura;
+    private final Rede rede;
+    private final DiscosGroup grupoDeDiscos;
+    private final ServicosGroup grupoDeServicos;
+    private final ProcessosGroup grupoDeProcessos;
+    private final JanelaGroup grupoDeJanelas;
 
-  public Looca() {
-    this.sistema = new Sistema();
-    this.memoria = new Memoria();
-    this.processador = new Processador();
-    this.temperatura = new Temperatura();
-    this.grupoDeDiscos = new DiscoGrupo();
-    this.grupoDeServicos = new ServicoGrupo();
-    this.grupoDeProcessos = new ProcessoGrupo();
-  }
+    public Looca() {
+        SystemInfo si = new SystemInfo();
 
-  public Sistema getSistema() {
-    return sistema;
-  }
+        this.sistema = new Sistema();
+        this.memoria = new Memoria();
+        this.processador = new Processador();
+        this.temperatura = new Temperatura();
+        this.rede = new Rede(si);
+        this.grupoDeDiscos = new DiscosGroup();
+        this.grupoDeServicos = new ServicosGroup();
+        this.grupoDeProcessos = new ProcessosGroup();
+        this.grupoDeJanelas = new JanelaGroup(si);
+    }
 
-  public Memoria getMemoria() {
-    return memoria;
-  }
+    public Sistema getSistema() {
+        return sistema;
+    }
 
-  public Processador getProcessador() {
-    return processador;
-  }
+    public Memoria getMemoria() {
+        return memoria;
+    }
 
-  public Temperatura getTemperatura() {
-    return temperatura;
-  }
+    public Processador getProcessador() {
+        return processador;
+    }
 
-  public DiscoGrupo getGrupoDeDiscos() {
-    return grupoDeDiscos;
-  }
+    public Temperatura getTemperatura() {
+        return temperatura;
+    }
 
-  public ServicoGrupo getGrupoDeServicos() {
-    return grupoDeServicos;
-  }
+    public DiscosGroup getGrupoDeDiscos() {
+        return grupoDeDiscos;
+    }
 
-  public ProcessoGrupo getGrupoDeProcessos() {
-    return grupoDeProcessos;
-  }
+    public ServicosGroup getGrupoDeServicos() {
+        return grupoDeServicos;
+    }
+
+    public ProcessosGroup getGrupoDeProcessos() {
+        return grupoDeProcessos;
+    }
+
+    public Rede getRede() {
+        return rede;
+    }
+
+    public JanelaGroup getGrupoDeJanelas() {
+        return grupoDeJanelas;
+    }
 }
