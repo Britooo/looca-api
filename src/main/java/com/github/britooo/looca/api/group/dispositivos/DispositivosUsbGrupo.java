@@ -1,5 +1,6 @@
 package com.github.britooo.looca.api.group.dispositivos;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,26 +12,67 @@ public class DispositivosUsbGrupo {
 
     private final HardwareAbstractionLayer hardwareAbstractionLayer = new SystemInfo().getHardware();
 
+    /**
+     * Retorna o número de <b>dispositivos USB</b>.
+     *
+     * @return Número de dispositivos identificados como USB.
+     */
     public Integer getTotalDispositvosUsb() {
-        return this.hardwareAbstractionLayer.getUsbDevices(false).size();
+        int totalDispositivosConectados = 0;
+
+        for(UsbDevice item : this.hardwareAbstractionLayer.getUsbDevices(false)) {
+            totalDispositivosConectados += item.getConnectedDevices().size();
+        }
+
+        return totalDispositivosConectados;
     }
 
+    /**
+     * Retorna o número de <b>dispositivos USB conectados</b>.
+     *
+     * @return Número de dispositivos conectados identificados como USB.
+     */
     public Integer getTotalDispositvosUsbConectados() {
-        return this.hardwareAbstractionLayer.getUsbDevices(true).size();
+        int totalDispositivosConectados = 0;
+
+        for(UsbDevice item : this.hardwareAbstractionLayer.getUsbDevices(true)) {
+            totalDispositivosConectados += item.getConnectedDevices().size();
+        }
+
+        return totalDispositivosConectados;
     }
+
+    /**
+     * Retorna os <b>dispositivos USB</b>.
+     *
+     * @return Dispositivos identificados como USB.
+     */
 
     public List<DispositivoUsb> getDispositivosUsb() {
-        return this.hardwareAbstractionLayer.getUsbDevices(false)
-                        .stream()
-                        .map(DispositivosUsbGrupo::of)
-                        .collect(Collectors.toList());
+        List<DispositivoUsb> dispositivoUsbList = new ArrayList<>();
+
+        for(UsbDevice item : this.hardwareAbstractionLayer.getUsbDevices(false)) {
+                dispositivoUsbList.add(DispositivosUsbGrupo.of(item));
+        }
+
+        return dispositivoUsbList;
     }
 
+    /**
+     * Retorna os <b>dispositivos USB conectados</b>.
+     *
+     * @return Dispositivos conectados identificados como USB.
+     */
     public List<DispositivoUsb> getDispositivosUsbConectados() {
-        return this.hardwareAbstractionLayer.getUsbDevices(true)
-                        .stream()
-                        .map(DispositivosUsbGrupo::of)
-                        .collect(Collectors.toList());
+        List<DispositivoUsb> dispositivoUsbList = new ArrayList<>();
+
+        for(UsbDevice item : this.hardwareAbstractionLayer.getUsbDevices(true)) {
+            for (UsbDevice usbDevice : item.getConnectedDevices()) {
+                dispositivoUsbList.add(DispositivosUsbGrupo.of(usbDevice));
+            }
+        }
+
+        return dispositivoUsbList;
     }
     
     private static DispositivoUsb of(UsbDevice usbDevice) {
