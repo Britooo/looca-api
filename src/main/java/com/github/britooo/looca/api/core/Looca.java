@@ -96,6 +96,10 @@ public class Looca {
       return grupoDeProcessos;
     }
 
+    /**
+     * Retorna um <b>Objeto de DispositivosUsbGrupo</b> que contém métodos relacionados a coleta de informações do <b>Grupo de Dispositivos USB</b>.
+     * @return Objeto DispositivosUsbGrupo.
+     */
     public DispositivosUsbGrupo getDispositivosUsbGrupo() {
         return grupoDeDispositivosUsb;
     }
