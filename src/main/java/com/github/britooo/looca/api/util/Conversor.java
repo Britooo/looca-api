@@ -2,6 +2,7 @@ package com.github.britooo.looca.api.util;
 
 import java.util.concurrent.TimeUnit;
 
+
 public class Conversor {
 
     private static final long KIBI = 1L << 10;
