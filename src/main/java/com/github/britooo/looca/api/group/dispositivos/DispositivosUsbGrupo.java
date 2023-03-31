@@ -13,14 +13,25 @@ public class DispositivosUsbGrupo {
     private final HardwareAbstractionLayer hardwareAbstractionLayer = new SystemInfo().getHardware();
 
     /**
-     * Retorna o número de <b>dispositivos usb</b>.
+     * Retorna o número de <b>dispositivos USB</b>.
      *
-     * @return Número de processos em execução.
+     * @return Número de dispositivos identificados como USB.
      */
     public Integer getTotalDispositvosUsb() {
-        return this.hardwareAbstractionLayer.getUsbDevices(false).size();
+        int totalDispositivosConectados = 0;
+
+        for(UsbDevice item : this.hardwareAbstractionLayer.getUsbDevices(false)) {
+            totalDispositivosConectados += item.getConnectedDevices().size();
+        }
+
+        return totalDispositivosConectados;
     }
 
+    /**
+     * Retorna o número de <b>dispositivos USB conectados</b>.
+     *
+     * @return Número de dispositivos conectados identificados como USB.
+     */
     public Integer getTotalDispositvosUsbConectados() {
         int totalDispositivosConectados = 0;
 
@@ -31,13 +42,27 @@ public class DispositivosUsbGrupo {
         return totalDispositivosConectados;
     }
 
+    /**
+     * Retorna os <b>dispositivos USB</b>.
+     *
+     * @return Dispositivos identificados como USB.
+     */
+
     public List<DispositivoUsb> getDispositivosUsb() {
-        return this.hardwareAbstractionLayer.getUsbDevices(false)
-                        .stream()
-                        .map(DispositivosUsbGrupo::of)
-                        .collect(Collectors.toList());
+        List<DispositivoUsb> dispositivoUsbList = new ArrayList<>();
+
+        for(UsbDevice item : this.hardwareAbstractionLayer.getUsbDevices(false)) {
+                dispositivoUsbList.add(DispositivosUsbGrupo.of(item));
+        }
+
+        return dispositivoUsbList;
     }
 
+    /**
+     * Retorna os <b>dispositivos USB conectados</b>.
+     *
+     * @return Dispositivos conectados identificados como USB.
+     */
     public List<DispositivoUsb> getDispositivosUsbConectados() {
         List<DispositivoUsb> dispositivoUsbList = new ArrayList<>();
 
