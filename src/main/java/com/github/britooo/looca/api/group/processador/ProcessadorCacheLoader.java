@@ -43,6 +43,10 @@ public class ProcessadorCacheLoader {
         });
   }
 
+  /**
+   * Retorna <b>uso</b> do processador em <b>procentagem</b>.
+   * @return Uso do processador em <b>procentagem</b>.
+   */
   public Double getUso() {
     try {
       return loader.get("uso");

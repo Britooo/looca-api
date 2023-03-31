@@ -12,7 +12,7 @@ public class Volume {
 
 
   /**
-   * <b>Retorna o UUID/GUID do sistema de arquivos.</b>
+   * Retorna o <b>UUID/GUID</b> do sistema de arquivos.
    *
    * @return UUID/GUID do sistema de arquivos.
    */
@@ -47,25 +47,25 @@ public class Volume {
   /**
    * <b>Retorna espaço/capacidade total da unidade (Em bytes).</b>
    *
-   * @return Espaço/capacidade total da unidade (Em bytes).
+   * @return Espaço/capacidade total da unidade <b>(Em bytes)</b>.
    */
   public Long getTotal() {
     return this.volume.getTotalSpace();
   }
 
   /**
-   * <p><b>Retorna o espaço livre na unidade.</b></p>
+   * <p>Retorna o <b>espaço livre</b> na unidade.</p>
    * <br>
-   * <p>Esse espaço não é alocado, mas pode exigir permissões elevadas para gravação (Em bytes).</p>
+   * <p>Esse espaço não é alocado, mas pode exigir permissões elevadas para gravação <b>(Em bytes)</b>.</p>
    *
-   * @return Espaço livre na unidade (Em bytes).
+   * @return Espaço livre na unidade <b>(Em bytes)</b>.
    */
   public Long getDisponivel() {
     return this.volume.getFreeSpace();
   }
 
   /**
-   * <b>Retorna o tipo do sistema de arquivos <i>(FAT, NTFS, etx2, ext4, etc...)</i>.</b>
+   * Retorna o tipo do <b>sistema de arquivos</b> <i>(FAT, NTFS, etx2, ext4, etc...)</i>.
    *
    * @return sistema de arquivos (FAT, NTFS, etx2, ext4, etc...).
    */
@@ -74,7 +74,7 @@ public class Volume {
   }
 
   /**
-   * <p><b>Retorna o ponto de montagem do sistema de arquivos.</b></p>
+   * <p>Retorna o <b>ponto de montagem</b> do sistema de arquivos.</p>
    * <br>
    * <p>O diretório que os usuários normalmente usarão para interagir com o armazenamento de arquivos.
    * <i>(Exemplo C: no Windows ou / no Linux)</i>.</p>
@@ -86,6 +86,10 @@ public class Volume {
   }
 
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Volume</b>.
+   * @return <code>String</code> com todas as informações relacionadas ao <b>Volume</b>.
+   */
   @Override
   public String toString() {
 

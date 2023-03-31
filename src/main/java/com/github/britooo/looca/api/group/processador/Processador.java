@@ -10,7 +10,7 @@ public class Processador {
   private final ProcessadorCacheLoader processadorCacheLoader = new ProcessadorCacheLoader();
 
   /**
-   * <b>Retorna o nome do Fornecedor do processador.</b>
+   * Retorna o nome do Fornecedor do processador.
    *
    * @return Nome do Fornecedor do processador.
    */
@@ -19,7 +19,7 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna o nome do Processador</b> <i>(Exemplo: Name, eg. Intel(R) Core(TM)2 Duo CPU T7300 @ 2.00GHz)</i>.
+   * Retorna o <b></b>nome do Processador</b> <i>(Exemplo: Name, eg. Intel(R) Core(TM)2 Duo CPU T7300 @ 2.00GHz)</i>.
    *
    * @return Nome do Processador.
    */
@@ -28,7 +28,7 @@ public class Processador {
   }
 
   /**
-   * <p><b>Retorna o ID do processador.</b></p>
+   * <p>Retorna o <b>ID do processador</b>.</p>
    * <br>
    * <p>Esta é uma <code>String</code> hexadecimal representando um valor de 8 bytes,
    * normalmente obtido usando o opcode CPUID com o registrador EAX definido como 1.
@@ -53,7 +53,7 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna o identificador</b>, <i>por exemplo: Família x86 6 Modelo 15 Etapa 10.</i>
+   * Retorna o <b>identificador</b>, <i>por exemplo: Família x86 6 Modelo 15 Etapa 10.</i>
    * Para processadores diferentes de <b>Intel</b> ou <b>AMD</b>, essa <code>String</code> é preenchida com valores comparáveis.
    *
    * @return Identificador.
@@ -63,7 +63,7 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna a microarquitetura do processador, se conhecida.</b>
+   * Retorna a <b>microarquitetura</b> do processador, <b>se conhecida</b>.
    * Caso contrário retorna a constante: <code>Constant.UNKNOWN</code>
    *
    * @return Microarquitetura do processador.
@@ -73,10 +73,10 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna a frequência do processador <i>(em Hz)</i></b>, por exemplo.
+   * Retorna a <b>frequência</b> do processador <b>(em Hz)</b>, por exemplo.
    * Para o processador denominado <i>Intel(R) Core(TM)2 Duo CPU T7300 @ 2,00 GHz</i>,
    * a frequência do processador é 2000000000hz.
-   * Caso a frequência do processador seja desconhecido retorna -1;
+   * Caso a frequência do processador seja <b>desconhecido retorna -1</b>;
    *
    * @return Frequência do processador.
    */
@@ -85,7 +85,7 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna o número de pacotes/soquetes no sistema.</b>
+   * Retorna o número de <b>pacotes/soquetes</b> no sistema.
    * Um único pacote pode conter vários núcleos.
    *
    * @return Número de pacotes físicos disponíveis.
@@ -95,7 +95,7 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna o úmero de CPUs/núcleos físicos disponíveis para processamento.</b>
+   * Retorna o número de <b>CPUs/núcleos físicos disponíveis</b> para processamento.
    *
    * @return Número de CPUs físicas disponíveis.
    */
@@ -104,8 +104,8 @@ public class Processador {
   }
 
   /**
-   * <b>Retorna o número de CPUs lógicas disponíveis para processamento.</b>
-   * Este valor pode ser maior do que CPUs físicas se o hyperthreading estiver habilitado.
+   * Retorna o número de <b>CPUs lógicas disponíveis</b> para processamento.
+   * Este valor pode ser <b>maior do que CPUs físicas</b> se o hyperthreading estiver habilitado.
    *
    * @return Número de CPUs lógicas disponíveis.
    */
@@ -114,7 +114,7 @@ public class Processador {
   }
 
   /**
-   * <p><b>Retorna a porcentagem de uso do processador, por meio dos contadores de ticks de carga de CPU em todo o sistema.</b></p>
+   * <p>Retorna a porcentagem de <b>uso do processador</b>, por meio dos contadores de ticks de carga de CPU em todo o sistema.</p>
    * <br>
    * <p>
    * Por meio de  um array com oito elementos representando milissegundos gastos nos estados:
@@ -145,6 +145,10 @@ public class Processador {
     return this.processadorCacheLoader.getUso();
   }
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Processador</b>.
+   * @return <code>String</code> com todas as informações relacionadas ao <b>Processador</b>.
+   */
   @Override
   public String toString() {
     final StringBuilder sb = new StringBuilder();

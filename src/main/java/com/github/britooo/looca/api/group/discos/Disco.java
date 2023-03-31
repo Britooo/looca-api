@@ -11,7 +11,7 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o nome do disco.</b>
+   * Retorna o <b>nome</b> do disco.
    *
    * @return Nome do disco.
    */
@@ -20,7 +20,7 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o modelo do disco.</b>
+   * Retorna o <b>modelo</b> do disco.
    *
    * @return Modelo do disco.
    */
@@ -29,7 +29,7 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o número do serial do disco, se disponível.</b>
+   * Retorna o <b>número do serial</b> do disco, <b>se disponível</b>.
    *
    * @return Número serial do disco, se disponível.
    */
@@ -38,16 +38,16 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o tamanho do disco em bytes.</b>
+   * Retorna o <b>tamanho</b> do disco em <b>bytes</b>.
    *
-   * @return Tamanho do disco em bytes.
+   * @return Tamanho do disco em <b>bytes</b>.
    */
   public Long getTamanho() {
     return disco.getSize();
   }
 
   /**
-   * <b>Retorna o número de leituras do disco.</b>
+   * Retorna o <b>número de leituras</b> do disco.
    *
    * @return Número de leituras do disco.
    */
@@ -56,7 +56,7 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o número de bytes lidos pelo disco.</b>
+   * Retorna o <b>número de bytes lidos</b> pelo disco.
    *
    * @return Número de bytes lidos pelo disco.
    */
@@ -65,7 +65,7 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o número de escritas no disco.</b>
+   * Retorna o <b>número de escritas</b> no disco.
    *
    * @return Número de escritas no disco.
    */
@@ -74,7 +74,7 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o número de bytes escritos no disco.</b>
+   * Retorna o <b>número de bytes escritos</b> no disco.
    *
    * @return Número de bytes escritos no disco.
    */
@@ -83,10 +83,10 @@ public class Disco {
   }
 
   /**
-   * <p><b>Retorna o comprimento da fila de disco (E/S's em andamento).</b></p>
+   * <p>Retorna o <b>comprimento da fila</b> de disco (E/S's em andamento).</p>
    * <br>
    * <p>Inclui solicitações de E/S que foram emitidas para o driver de dispositivo,
-   * mas ainda não foram concluídas. Não compatível com macOS.</p>
+   * mas ainda não foram concluídas. <b>Não compatível com macOS</b>.</p>
    *
    * @return Comprimento da fila de disco (E/S's em andamento).
    */
@@ -95,9 +95,9 @@ public class Disco {
   }
 
   /**
-   * <b>Retorna o tempo gasto lendo ou escrevendo no disco, em milissegundos.</b>
+   * Retorna o <b>tempo gasto lendo ou escrevendo</b> no disco, em <b>milissegundos</b>.
    *
-   * @return Tempo gasto lendo ou escrevendo no disco, em milissegundos.
+   * @return Tempo gasto lendo ou escrevendo no disco, em <b>milissegundos</b>.
    */
 
   public Long getTempoDeTransferencia() {
@@ -105,6 +105,10 @@ public class Disco {
   }
 
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Disco</b>.
+   * @return <code>String</code> com todas as informações relacionadas ao <b>Disco</b>.
+   */
   @Override
   public String toString() {
 

@@ -15,7 +15,7 @@ public class ProcessoGrupo {
   private final OperatingSystem os = new SystemInfo().getOperatingSystem();
 
   /**
-   * <b>Retorna o número de threads em execução.</b>
+   * Retorna o número de <b>threads em execução</b>.
    *
    * @return Número de threads em execução.
    */
@@ -24,7 +24,7 @@ public class ProcessoGrupo {
   }
 
   /**
-   * <b>Retorna o número de processos em execução.</b>
+   * Retorna o número de <b>processos em execução</b>.
    *
    * @return Número de processos em execução.
    */
@@ -33,7 +33,7 @@ public class ProcessoGrupo {
   }
 
   /**
-   * <p><b>Retorna os processos em execução no momento. Nenhum pedido é garantido.</b></p>
+   * <p>Retorna os <b>processos em execução no momento</b>. Nenhum pedido é garantido.</p>
    * <br>
    * <p>Sendo uma lista de objetos <code>OSProcess</code> para o número especificado (ou todos) de processos atualmente em execução,
    * classificados conforme especificado.
@@ -56,6 +56,10 @@ public class ProcessoGrupo {
     return new Processo(processo, memoria);
   }
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Grupo de Processos</b>.
+   * @return <code>String</code> com todas as informações relacionadas ao <b>Grupo de Processos</b>.
+   */
   @Override
   public String toString() {
     return String.format("\nLista de processos\nTotal de processos ativos: %d\nTotal de threads: %d\nProcessos: %s",
