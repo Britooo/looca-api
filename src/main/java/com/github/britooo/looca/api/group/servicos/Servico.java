@@ -11,16 +11,16 @@ public class Servico {
   }
 
   /**
-   * Obtém o ID do processo atual
+   * Obtém o <b>ID do processo atual</b>.
    * 
-   * @return ID do processo
+   * @return ID do processo.
    */
   public Integer getPid() {
     return this.servico.getProcessID();
   }
 
   /**
-   * Retorna o nome do serviço.
+   * Retorna o <b>nome do serviço</b>.
    * 
    * @return Nome do serviço.
    */
@@ -30,17 +30,21 @@ public class Servico {
 
   /**
    * <p>
-   *  Retorna o estado do serviço.
+   *  Retorna o <b>estado do serviço</b>.
    * </p>
    * 
-   * Ex: <code>STOPPED</code>, <code>RUNNING</code>
+   * Ex: <code>STOPPED</code>, <code>RUNNING</code>.
    * 
-   * @return Estado do serviço
+   * @return Estado do serviço.
    */
   public String getEstado() {
     return this.servico.getState().toString();
   }
 
+  /**
+   * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Serviço</b>.
+   * @return <code>String</code> com todas as informações relacionadas ao <b>Serviço</b>.
+   */
   @Override
   public String toString() {
 

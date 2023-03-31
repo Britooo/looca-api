@@ -16,7 +16,7 @@ public class DiscoGrupo {
   private final HardwareAbstractionLayer hal = system.getHardware();
 
   /**
-   * <b>Retorna uma lista de <code>Volume</code>.</b>
+   * Retorna uma <b>lista de <code>Volume</code></b>.
    *
    * @return Lista de Volume.
    */
@@ -29,7 +29,7 @@ public class DiscoGrupo {
   }
 
   /**
-   * <b>Retorna uma lista de <code>Disco</code>.</b>
+   * Retorna uma <b>lista de <code>Disco</code></b>.
    *
    * @return Lista de Disco.
    */
@@ -40,9 +40,9 @@ public class DiscoGrupo {
   }
 
   /**
-   * <b>Retorna o tamanho dos discos somados em bytes.</b>
+   * Retorna o <b>tamanho dos discos somados</b> em <b>bytes</b>.
    *
-   * @return Tamanho dos discos somados em bytes.
+   * @return Tamanho dos discos somados em <b>bytes</b>.
    */
   public Long getTamanhoTotal() {
     return this.getDiscos().stream()
@@ -50,7 +50,7 @@ public class DiscoGrupo {
   }
 
   /**
-   * <b>Retorna a quantidade de discos existentes citados na lista de discos (Contagem total de discos).</b>
+   * Retorna a <b>quantidade de discos existentes</b> citados na lista de discos <b>(Contagem total de discos)</b>.
    *
    * @return Soma total de discos.
    */
@@ -59,7 +59,7 @@ public class DiscoGrupo {
   }
 
   /**
-   * <b>Retorna a quantidade de volumes existentes citados na lista de volumes (Contagem total de volumes).</b>
+   * Retorna a <b>quantidade de volumes existentes</b> citados na lista de volumes <b>(Contagem total de volumes)</b>.
    *
    * @return Soma total de volumes.
    */
