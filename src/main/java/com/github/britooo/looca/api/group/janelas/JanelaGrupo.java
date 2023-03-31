@@ -6,11 +6,11 @@ import oshi.software.os.OperatingSystem;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class JanelaGroup {
+public class JanelaGrupo {
 
   private final OperatingSystem so;
 
-  public JanelaGroup(SystemInfo si) {
+  public JanelaGrupo(SystemInfo si) {
     this.so = si.getOperatingSystem();
   }
 
