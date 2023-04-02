@@ -14,6 +14,11 @@ public class RedeInterfaceGroup {
     this.hal = si.getHardware();
   }
 
+  /**
+   * Retorna uma lista de <b>Interfaces de Rede</b> disponíveis.
+   *
+   * @return Lista de interfaces de rede.
+   */
   public List<RedeInterface> getInterfaces() {
     return this.hal.getNetworkIFs().stream()
         .map(RedeInterface::of)

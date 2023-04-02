@@ -21,40 +21,85 @@ public class RedeInterface {
     return new RedeInterface(redeInterface);
   }
 
+  /**
+   * Retorna o <b>nome</b> da interface de rede.
+   *
+   * @return Nome da interface de rede.
+   */
   public String getNome() {
     return this.redeInterface.getName();
   }
 
+  /**
+   * Retorna a <b>descrição</b> da interface de rede.
+   *
+   * @return Descrição da interface.
+   */
   public String getNomeExibicao() {
     return this.redeInterface.getDisplayName();
   }
 
+  /**
+   * Retorna uma lista com os <b>endereços de IP (v4)</b> relacionados com essa interface de rede.
+   *
+   * @return Lista de endereços de IP
+   */
   public List<String> getEnderecoIpv4() {
     return Arrays.asList(this.redeInterface.getIPv4addr());
   }
 
+  /**
+   * Retorna uma lista com os <b>endereços de IP (v6)</b> relacionados com essa interface de rede.
+   *
+   * @return Lista de endereços de IP
+   */
   public List<String> getEnderecoIpv6() {
     return Arrays.asList(this.redeInterface.getIPv6addr());
   }
 
+  /**
+   * Retorna o <b>endereço MAC</b> da interface de rede.
+   *
+   * @return MAC address.
+   */
   public String getEnderecoMac() {
     return this.redeInterface.getMacaddr();
   }
 
+  /**
+   * Retorna o total de <b>bytes recebidos</b> pela interface de rede.
+   *
+   * @return Total de bytes recebidos
+   */
   public Long getBytesRecebidos() {
     this.redeInterface.updateAttributes();
     return this.redeInterface.getBytesRecv();
   }
 
+  /**
+   * Retorna o total de <b>bytes enviados</b> pela interface de rede.
+   *
+   * @return Total de bytes enviados
+   */
   public Long getBytesEnviados() {
     this.redeInterface.updateAttributes();
     return this.redeInterface.getBytesSent();
   }
 
+  /**
+   * Retorna o total de <b>pacotes recebidos</b> pela interface de rede.
+   *
+   * @return Total de pacotes recebidos
+   */
   public Long getPacotesRecebidos() {
     return this.redeInterface.getPacketsRecv();
   }
 
+  /**
+   * Retorna o total de <b>pacotes enviados</b> pela interface de rede.
+   *
+   * @return Total de pacotes enviados
+   */
   public Long getPacotesEnviados() {
     return this.redeInterface.getPacketsSent();
   }

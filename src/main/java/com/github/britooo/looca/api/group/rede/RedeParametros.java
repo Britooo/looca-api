@@ -14,14 +14,29 @@ public class RedeParametros {
     this.parametrosRede = si.getOperatingSystem().getNetworkParams();
   }
 
+  /**
+   * Retorna o <b>hostname</b> do computador.
+   *
+   * @return Hostname.
+   */
   public String getHostName() {
     return this.parametrosRede.getHostName();
   }
 
+  /**
+   * Retorna o <b>nome de domínio</b> do computador.
+   *
+   * @return Nome de domínio.
+   */
   public String getNomeDeDominio() {
     return this.parametrosRede.getDomainName();
   }
 
+  /**
+   * Retorna uma lista de <b>IPs</b> dos <b>servidores DNS</b> disponíveis.
+   *
+   * @return IPs dos servidores DNS.
+   */
   public List<String> getServidoresDns() {
     return Arrays.asList(this.parametrosRede.getDnsServers());
   }
