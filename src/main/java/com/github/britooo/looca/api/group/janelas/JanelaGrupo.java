@@ -14,22 +14,42 @@ public class JanelaGrupo {
     this.so = si.getOperatingSystem();
   }
 
+  /**
+   * Retorna uma lista de <b>Janelas</b> visíveis e invisíveis abertas no sistema operacional.
+   *
+   * @return Lista de janelas.
+   */
   public List<Janela> getJanelas() {
     return so.getDesktopWindows(false).stream()
         .map(Janela::of)
         .collect(Collectors.toList());
   }
 
+  /**
+   * Retorna uma lista de <b>Janelas</b>, apenas com as janelas visíveis no sistema operacional.
+   *
+   * @return Lista de janelas.
+   */
   public List<Janela> getJanelasVisiveis() {
     return so.getDesktopWindows(true).stream()
         .map(Janela::of)
         .collect(Collectors.toList());
   }
 
+  /**
+   * Retorna a quantidade total de <b>Janelas</b> visíveis e invisíveis no sistema operacional.
+   *
+   * @return Total de janelas.
+   */
   public Integer getTotalJanelas() {
     return so.getDesktopWindows(false).size();
   }
 
+  /**
+   * Retorna a quantidade total de <b>Janelas</b> visíveis no sistema operacional.
+   *
+   * @return Total de janelas.
+   */
   public Integer getTotalJanelasVisiveis() {
     return so.getDesktopWindows(true).size();
   }

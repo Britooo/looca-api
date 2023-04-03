@@ -103,11 +103,20 @@ public class Looca {
     public DispositivosUsbGrupo getDispositivosUsbGrupo() {
         return grupoDeDispositivosUsb;
     }
-    
+
+    /**
+     * Retorna um <b>Objeto de Rede</b> que contém métodos relacionados a coleta de informações de <b>Rede</b>.
+     * @return Objeto Rede.
+     */
     public Rede getRede() {
         return rede;
     }
 
+    /**
+     * Retorna um <b>Objeto de JanelaGrupo</b> que contém métodos relacionados a coleta de informações do
+     * <b>Grupo de Janelas</b> do computador.
+     * @return Objeto Rede.
+     */
     public JanelaGrupo getGrupoDeJanelas() {
         return grupoDeJanelas;
     }
