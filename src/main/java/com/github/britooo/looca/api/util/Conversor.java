@@ -15,7 +15,7 @@ public class Conversor {
     /**
      * Retorna uma <code>String</code> com o valor em <b>bytes</b> convertidos em sua ordem de grandeza equivalente.
      * @param bytes
-     * Corresponde a quantidade de <b>bytes</b> <i>(Ex: 1000000000 bytes -> 1 Gigabyte)</i>.
+     * Corresponde a quantidade de <b>bytes</b> <i>(Ex: 1000000000 bytes = 1 Gigabyte)</i>.
      * @return Retorna uma <code>String</code> que corresponde aos <b>bytes</b> convertidos em sua ordem de grandeza equivalente.
      */
     public static String formatarBytes(long bytes) {

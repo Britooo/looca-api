@@ -19,7 +19,7 @@ public class Processador {
   }
 
   /**
-   * Retorna o <b></b>nome do Processador</b> <i>(Exemplo: Name, eg. Intel(R) Core(TM)2 Duo CPU T7300 @ 2.00GHz)</i>.
+   * Retorna o <b>nome do Processador</b> <i>(Exemplo: Name, eg. Intel(R) Core(TM)2 Duo CPU T7300 @ 2.00GHz)</i>.
    *
    * @return Nome do Processador.
    */

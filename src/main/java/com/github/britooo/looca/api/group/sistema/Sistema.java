@@ -77,7 +77,7 @@ public class Sistema {
 
   /**
    * Retorna uma <code>String</code> com todas as informações relacionadas ao <b>Sistema Operacional</b>.
-   * @return <code>String</code> que contém todas as informações relacionadas ao <b>Sistema Operacional</b.
+   * @return <code>String</code> que contém todas as informações relacionadas ao <b>Sistema Operacional</b>.
    */
   @Override
   public String toString() {
